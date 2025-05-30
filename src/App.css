@@ -1,38 +1,97 @@
-.App {
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 80%;
+  max-width: 250px;
+  margin: 0 auto 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.highlight {
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section-title {
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.services,
+.features {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+  margin: 0 0 20px;
+}
+
+.blue-banner {
+  background-color: #4da6a6;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 30px 0 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.intro {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.desc {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.highlight-text {
+  color: orange;
+  font-weight: bold;
+}
+
+.socials p {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 8px 0;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="email"] {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-highlight {
+  margin-top: 30px;
+  color: orange;
+  font-size: 14px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  flex-shrink: 0;
 }
