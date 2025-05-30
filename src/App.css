@@ -95,3 +95,18 @@ input[type="email"] {
   margin-right: 8px;
   flex-shrink: 0;
 }
+
+button[type="submit"] {
+  background-color: #4da6a6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #3b8f8f;
+}
