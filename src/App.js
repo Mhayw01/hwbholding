@@ -43,9 +43,21 @@ function App() {
 
       <div className="blue-banner">FOLLOW US ON SOCIALS</div>
       <div className="socials">
-        <p><img src={facebookIcon} alt="Facebook" className="icon" /> <strong>Health Hwb</strong></p>
-        <p><img src={instagramIcon} alt="Instagram" className="icon" /> <strong>healthhwbbarry</strong></p>
-        <p><img src={mailIcon} alt="Email" className="icon" /> <strong>info@healthhwb.co.uk</strong></p>
+        <p>
+          <a href="https://facebook.com/healthhwb" target="_blank" rel="noopener noreferrer">
+            <img src={facebookIcon} alt="Facebook" className="icon" /> <strong>Health Hwb</strong>
+          </a>
+        </p>
+        <p>
+          <a href="https://instagram.com/healthhwbbarry" target="_blank" rel="noopener noreferrer">
+            <img src={instagramIcon} alt="Instagram" className="icon" /> <strong>healthhwbbarry</strong>
+          </a>
+        </p>
+        <p>
+          <a href="mailto:info@healthhwb.co.uk">
+            <img src={mailIcon} alt="Email" className="icon" /> <strong>info@healthhwb.co.uk</strong>
+          </a>
+        </p>
 
         <form name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
