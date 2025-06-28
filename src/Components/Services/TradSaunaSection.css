@@ -1,0 +1,64 @@
+
+
+/* Section: Traditional Finnish Sauna */
+.trad-sauna {
+  background: #020202;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.trad-sauna__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trad-sauna__icon {
+  margin-bottom: 24px;
+}
+
+.trad-sauna__icon img {
+  width: 45px;
+  height: 45px;
+}
+
+.trad-sauna__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+.trad-sauna__descriptions {
+  max-width: 262px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.trad-sauna__descriptions p {
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.trad-sauna__descriptions strong {
+  font-weight: 600;
+}
+
+.trad-sauna__tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 24px;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trad-sauna {
+    padding: 2rem 1rem;
+  }
+}

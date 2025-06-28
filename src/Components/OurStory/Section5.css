@@ -1,0 +1,43 @@
+
+
+/* Section 5: Let’s Connect */
+.story-section5 {
+  position: relative;
+  overflow: hidden;
+  background: #58B4C3;
+}
+
+.story-section5__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #58B4C3;
+}
+
+.story-section5__content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 29px 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.story-section5__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 16px;
+}
+
+.story-section5__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 294px;
+  margin: 0 auto;
+}

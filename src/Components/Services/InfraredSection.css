@@ -1,0 +1,64 @@
+
+
+/* Section: Infrared Sauna */
+.infrared-sauna {
+  background: #E85A1A;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.infrared-sauna__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.infrared-sauna__icon {
+  margin-bottom: 24px;
+}
+
+.infrared-sauna__icon img {
+  width: 45px;
+  height: 45px;
+}
+
+.infrared-sauna__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+.infrared-sauna__descriptions {
+  max-width: 262px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.infrared-sauna__descriptions p {
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.infrared-sauna__descriptions strong {
+  font-weight: 600;
+}
+
+.infrared-sauna__tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 24px;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infrared-sauna {
+    padding: 2rem 1rem;
+  }
+}

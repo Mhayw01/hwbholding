@@ -1,0 +1,44 @@
+
+
+/* Section 2: The Birth of HWB – A People-First Vision */
+.story-section2 {
+  position: relative;
+  overflow: hidden;
+  background: #020202;
+}
+
+.story-section2__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #020202;
+}
+
+.story-section2__content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 25px 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.story-section2__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 auto 16px;
+  max-width: 294px;
+}
+
+.story-section2__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 294px;
+  margin: 0 auto;
+}

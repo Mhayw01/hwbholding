@@ -1,0 +1,92 @@
+/* Section: Cold Therapy */
+.cold-therapy {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Background bars */
+.cold-therapy__bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.cold-therapy__bar--black {
+  top: 0;
+  height: 85px;
+  background: #020202;
+}
+.cold-therapy__bar--blue {
+  top: 85px;
+  height: 592px;
+  background: #58B4C3;
+}
+
+/* Inner content wrapper */
+.cold-therapy__inner {
+  position: relative;
+  padding-top: 33px;
+  text-align: center;
+}
+
+/* Header text */
+.cold-therapy__header-text {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Icon circle */
+.cold-therapy__icon {
+  display: inline-block;
+  margin: 60px 0 24px; /* push icon down into the blue section */
+}
+.cold-therapy__icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Service title */
+.cold-therapy__title {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+/* Descriptions container */
+.cold-therapy__descriptions {
+  max-width: 262px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.cold-therapy__descriptions p {
+  margin: 0 0 12px;
+}
+.cold-therapy__descriptions strong {
+  font-weight: 600;
+}
+
+/* Tagline */
+.cold-therapy__tagline {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cold-therapy__inner {
+    padding: 16px 1rem;
+  }
+}

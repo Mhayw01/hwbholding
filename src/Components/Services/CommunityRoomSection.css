@@ -1,0 +1,56 @@
+/* Section: Community Well-being Room */
+.community-room {
+  background: #A3742B;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.community-room__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-room__icon {
+  margin-bottom: 24px;
+}
+
+.community-room__icon img {
+  width: 45px;
+  height: auto;
+}
+
+.community-room__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+.community-room__descriptions {
+  max-width: 262px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.community-room__descriptions p {
+  margin: 0 0 12px;
+}
+
+.community-room__tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .community-room {
+    padding: 2rem 1rem;
+  }
+}

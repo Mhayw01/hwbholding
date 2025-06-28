@@ -1,0 +1,131 @@
+/* Section 4: Follow Us & Subscribe */
+
+.home-section4 {
+  width: 100%;
+  background-color: #E85A1A;
+  padding: 2rem 1rem; /* flexible vertical padding */
+}
+
+.home-section4__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Subtitle */
+.home-section4__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* Social links */
+.home-section4__socials {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-section4__socials li {
+  list-style: none;
+  margin: 0;
+}
+
+.home-section4__socials li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none; /* remove underline */
+}
+
+.home-section4__socials img {
+  width: 36px;
+  height: 36px;
+}
+
+/* .home-section4__socials span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+} */
+
+/* Mailing list form */
+.home-section4__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.home-section4__form label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.home-section4__form input[type="email"] {
+  width: 274px;
+  height: 32px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #D9D9D9;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.home-section4__form button[type="submit"] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #020202;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer slogan */
+.home-section4__slogan {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #E9A524;
+  margin-top: 2rem;
+}
+
+/* Mobile responsive (same breakpoint) */
+@media (max-width: 768px) {
+  .home-section4__title,
+  /* .home-section4__socials span, */
+  .home-section4__form label,
+  .home-section4__slogan {
+    font-size: 18px;
+  }
+
+  .home-section4__inner {
+    padding: 1.5rem 1rem;
+  }
+
+  .home-section4__socials img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-section4__form input[type="email"] {
+    width: 100%;
+    max-width: 274px;
+  }
+}

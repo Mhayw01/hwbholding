@@ -1,0 +1,37 @@
+/* Accordion Item Styles */
+.accordion-item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-item__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-item__icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item__icon.open {
+  transform: rotate(45deg);
+}
+
+.accordion-item__content {
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}

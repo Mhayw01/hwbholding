@@ -1,0 +1,49 @@
+
+
+/* Section 3: What I Hope HWB Will Achieve */
+.story-section3 {
+  position: relative;
+  overflow: hidden;
+  background: #A3742B;
+}
+
+.story-section3__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #A3742B;
+}
+
+.story-section3__content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 23px 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.story-section3__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto 16px;
+  max-width: 239px;
+}
+
+.story-section3__text {
+  max-width: 294px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.story-section3__text p {
+  margin: 0 0 12px;
+}

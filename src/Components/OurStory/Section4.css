@@ -1,0 +1,42 @@
+/* Section 4: A Message From Me */
+.story-section4 {
+  position: relative;
+  overflow: hidden;
+  background: #020202;
+}
+
+.story-section4__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #020202;
+}
+
+.story-section4__content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 1rem; /* reduced top padding for the title */
+  text-align: center;
+  color: #fff;
+}
+
+.story-section4__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 auto 16px;
+  max-width: 164px;
+}
+
+.story-section4__text {
+  max-width: 294px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}

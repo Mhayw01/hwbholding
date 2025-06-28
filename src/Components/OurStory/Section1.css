@@ -1,0 +1,61 @@
+
+
+/* Section 1: Our Story – Jake Hudson */
+.story-section1 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background bars */
+.story-section1__bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.story-section1__bar--black {
+  top: 0;
+  height: 64px;
+  background: #020202;
+}
+.story-section1__bar--orange {
+  top: 64px;
+  height: 483px;
+  background: #E85A1A;
+}
+
+/* Content wrapper */
+.story-section1__content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 32px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Header */
+.story-section1__header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Sub-header */
+.story-section1__subheader {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 16px 0 0;
+}
+
+/* Body text */
+.story-section1__text {
+  max-width: 294px;
+  margin: 16px auto 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
