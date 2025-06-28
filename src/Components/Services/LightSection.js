@@ -16,7 +16,7 @@ const LightSection = () => (
           Immersive colour therapy lighting flows through every hot and cold space, creating a full-body sensory experience.
         </p>
         <p>
-          <strong>What it does:</strong> Shifting light tones support mood, energy, sleep, and emotional balance — with colours like blue to calm, red to energise, and green to restore harmony.
+          <strong>What it does:</strong> Shifting light tones support mood, energy, sleep, and emotional balance, with colours like blue to calm, red to energise, and green to restore harmony.
         </p>
         <p>
           Whether you’re unwinding in the sauna or stepping into the cold, the light helps guide your mindset and deepen your reset.

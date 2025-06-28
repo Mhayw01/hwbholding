@@ -18,9 +18,9 @@ const Section1 = () => (
       <p className="story-section1__text">
         At 16, I joined the Royal Navy. It taught me discipline, leadership, and the true value of camaraderie. But life changed when I had to return home unexpectedly after losing my mum. That moment, along with the pressures of military life, sent me on a much deeper journey.
         <br/><br/>
-        My biggest battle came after the service — with my own mental health. I reached a crisis point. Depression hit hard. But with the support of veteran networks and mental health services, I slowly started to rebuild.
+        My biggest battle came after the service, with my own mental health. I reached a crisis point. Depression hit hard. But with the support of veteran networks and mental health services, I slowly started to rebuild.
         <br/><br/>
-        That process changed me. It made me realise just how vital community, recovery, and accessible wellbeing spaces really are — not just for veterans, but for anyone who’s struggling. And that’s when the idea for HWB was born.
+        That process changed me. It made me realise just how vital community, recovery, and accessible wellbeing spaces really are ,not just for veterans, but for anyone who’s struggling. And that’s when the idea for HWB was born.
       </p>
     </div>
   </section>

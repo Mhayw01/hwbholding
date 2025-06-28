@@ -12,7 +12,7 @@ const PartnerSection = () => (
       <div className="partner-section__item">
         <h4 className="partner-section__item-title">Hair &amp; Nails</h4>
         <p className="partner-section__item-desc">
-          Relaxing treatments that help you feel fresh, reset, and ready — because wellbeing is head to toe.
+          Relaxing treatments that help you feel fresh, reset, and ready, because wellbeing is head to toe.
         </p>
       </div>
       <div className="partner-section__item">
@@ -24,7 +24,7 @@ const PartnerSection = () => (
       <div className="partner-section__item">
         <h4 className="partner-section__item-title">Pop-ups &amp; Wellbeing Sessions</h4>
         <p className="partner-section__item-desc">
-          From mental health workshops to breathwork, journaling, and seasonal self-care events — our space is open to the community.
+          From mental health workshops to breathwork, journaling, and seasonal self-care events, our space is open to the community.
         </p>
       </div>
       <p className="partner-section__tagline">

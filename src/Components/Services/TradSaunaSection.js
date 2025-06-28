@@ -19,7 +19,7 @@ const TradSaunaSection = () => (
           <strong>What it does:</strong> The intense heat promotes full-body detox, supports cardiovascular health, improves breathing, and relaxes deep muscle tension.
         </p>
         <p>
-          As your body sweats, it flushes out toxins, clears the skin, and eases tightness — perfect to start the day, reset after training, or unwind after a long shift.
+          As your body sweats, it flushes out toxins, clears the skin, and eases tightness, perfect to start the day, reset after training, or unwind after a long shift.
         </p>
         <p>
           <strong>Why it works:</strong> The dry air raises your core temperature, increasing circulation, calming the nervous system, and triggering natural recovery from the inside out.

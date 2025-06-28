@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Banner.css';
-import logo from '../../assets/hwblogo.svg';
+import logo from '../../assets/hwblogo1.svg';
 
 const Banner = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,11 +1,9 @@
-
-
 /* Section 3: What Makes Us Different */
 
 .home-section3 {
   width: 100%;
   background: #020202;
-  padding: 2rem 1rem; /* flexible vertical padding */
+  padding: 2rem 0; /* remove horizontal padding */
 }
 
 .home-section3__inner {
@@ -65,6 +63,6 @@
     font-size: 18px;
   }
   .home-section3__inner {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;
   }
 }

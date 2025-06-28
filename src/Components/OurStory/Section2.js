@@ -8,16 +8,16 @@ const Section2 = () => (
     
     <div className="story-section2__content">
       <h3 className="story-section2__title">
-        The Birth of HWB – A People-First Vision
+        The Birth of HWB - A People-First Vision
       </h3>
       <p className="story-section2__text">
         I created HWB with one clear mission: to put people before profit.
         <br/><br/>
-        I wanted to build something for Barry — a space that’s welcoming, inclusive, and genuinely supportive. A place where you can reset, slow down, and feel part of something bigger.
+        I wanted to build something for Barry, a space that’s welcoming, inclusive, and genuinely supportive. A place where you can reset, slow down, and feel part of something bigger.
         <br/><br/>
-        “I wanted a place where anyone—shift workers, nurses, students, vets—could come, reset, and feel part of something bigger.”
+        “I wanted a place where anyone, shift workers, nurses, students, or vets could come, reset, and feel part of something bigger.”
         <br/><br/>
-        HWB isn’t just a wellness centre. It’s a hub for connection. A place to breathe, reflect, recover — without pressure or judgment.
+        HWB isn’t just a wellness centre. It’s a hub for connection. A place to breathe, reflect, recover without pressure or judgment.
       </p>
     </div>
   </section>

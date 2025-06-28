@@ -26,7 +26,7 @@ const ColdTherapySection = () => (
           <strong>What it does:</strong> Cold immersion stimulates blood flow, reduces inflammation, and releases endorphins.
         </p>
         <p>
-          Whether you’re an athlete, shift worker, or just need a reset — you’ll feel the mental clarity and physical relief almost instantly.
+          Whether you’re an athlete, shift worker, or just need a reset, you’ll feel the mental clarity and physical relief almost instantly.
         </p>
         <p>
           <strong>Why it works:</strong> Used regularly, cold therapy can support better sleep, a stronger immune system, and reduced muscle soreness.

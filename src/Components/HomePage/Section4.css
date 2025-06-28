@@ -3,7 +3,7 @@
 .home-section4 {
   width: 100%;
   background-color: #E85A1A;
-  padding: 2rem 1rem; /* flexible vertical padding */
+  padding: 2rem 0;    /* remove horizontal padding */
 }
 
 .home-section4__inner {
@@ -116,7 +116,7 @@
   }
 
   .home-section4__inner {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;  /* remove horizontal padding */
   }
 
   .home-section4__socials img {
