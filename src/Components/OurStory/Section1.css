@@ -19,7 +19,7 @@
 }
 .story-section1__bar--orange {
   top: 64px;
-  height: 483px;
+  height: 520px;
   background: #E85A1A;
 }
 
@@ -29,6 +29,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 32px;
+  padding-bottom: 30px;
   text-align: center;
   color: #fff;
 }
