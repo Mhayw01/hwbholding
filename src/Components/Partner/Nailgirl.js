@@ -35,7 +35,7 @@ const Nailgirl = () => {
           Book an appointment or follow Kim’s work on Insta or book via WhatsApp
         </p>
         <div className="nailgirl__icons">
-          <a href="https://www.instagram.com/_thenailgirl_/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/__thenailgirl__/" target="_blank" rel="noopener noreferrer">
             <img src={NailgirlInsta} alt="Instagram" />
           </a>
           <a href="https://wa.me/447810818573" target="_blank" rel="noopener noreferrer">
