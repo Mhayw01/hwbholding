@@ -1,0 +1,73 @@
+.helen {
+  background-color: rgba(180, 97, 169, 0.83);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.helen__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.helen-title {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.helen-logo {
+  width: 107px;
+  height: 107px;
+  margin-bottom: 1.5rem;
+}
+
+.helen-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.helen-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 327px;
+  margin: 0 auto 2rem;
+}
+
+.helen-image {
+  width: 100%;
+  max-width: 321px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.helen-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.helen-icons img {
+  width: 27px;
+  height: 27px;
+}
+
+@media (max-width: 768px) {
+  .helen {
+    padding: 2rem 1rem;
+  }
+
+  .helen-title {
+    font-size: 1.125rem;
+  }
+
+  .helen-text {
+    font-size: 0.8125rem;
+  }
+}

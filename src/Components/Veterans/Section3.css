@@ -1,0 +1,46 @@
+
+
+.veterans3 {
+  background-color: #B19667;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.veterans3__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.veterans3__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.veterans3__logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+.veterans3__text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .veterans3 {
+    padding: 2rem 1rem;
+  }
+
+  .veterans3__title {
+    font-size: 1.125rem;
+  }
+
+  .veterans3__text {
+    font-size: 0.8125rem;
+  }
+}

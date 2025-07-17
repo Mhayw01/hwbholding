@@ -1,0 +1,70 @@
+
+
+.nailgirl {
+  background-color: #020202;
+  color: #FCFCDE;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.nailgirl__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nailgirl__title {
+  font-family: 'Bad Script', cursive;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.nailgirl__logo {
+  width: 167px;
+  height: 167px;
+  margin-bottom: 2rem;
+}
+
+.nailgirl__copy {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.nailgirl__image {
+  width: 100%;
+  max-width: 321px;
+  height: auto;
+  border: 2px solid #FCFCDE;
+  border-radius: 5px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.nailgirl__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.nailgirl__icons img {
+  width: 27px;
+  height: 27px;
+}
+
+@media (max-width: 768px) {
+  .nailgirl {
+    padding: 2rem 1rem;
+  }
+
+  .nailgirl__title {
+    font-size: 1.125rem;
+  }
+
+  .nailgirl__copy {
+    font-size: 0.8125rem;
+  }
+}

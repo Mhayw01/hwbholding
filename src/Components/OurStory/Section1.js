@@ -20,7 +20,7 @@ const Section1 = () => (
         <br/><br/>
         My biggest battle came after the service, with my own mental health. I reached a crisis point. Depression hit hard. But with the support of veteran networks and mental health services, I slowly started to rebuild.
         <br/><br/>
-        That process changed me. It made me realise just how vital community, recovery, and accessible wellbeing spaces really are ,not just for veterans, but for anyone who’s struggling. And that’s when the idea for HWB was born.
+        That process changed me. It made me realise just how vital community, recovery, and accessible wellbeing spaces really are not just for veterans, but for anyone who’s struggling. And that’s when the idea for HWB was born.
       </p>
     </div>
   </section>

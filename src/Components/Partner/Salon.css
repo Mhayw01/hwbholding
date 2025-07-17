@@ -1,0 +1,72 @@
+
+
+
+.salon {
+  background-color: #B19678;
+  color: #FAF5F2;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.salon__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.salon__title {
+  font-family: 'Vujahday Script', cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.salon__logo {
+  width: 167px;
+  height: 167px;
+  margin-bottom: 2rem;
+}
+
+.salon__copy {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.salon__image {
+  width: 100%;
+  max-width: 321px;
+  height: auto;
+  border: 2px solid #FAF5F2;
+  border-radius: 5px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.salon__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.salon__icons img {
+  width: 27px;
+  height: 27px;
+}
+
+@media (max-width: 768px) {
+  .salon {
+    padding: 2rem 1rem;
+  }
+
+  .salon__title {
+    font-size: 1.25rem;
+  }
+
+  .salon__copy {
+    font-size: 0.8125rem;
+  }
+}
