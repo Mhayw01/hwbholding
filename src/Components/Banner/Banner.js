@@ -57,6 +57,9 @@ const Banner = () => {
           <NavLink to="/reviews" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>
             Reviews
           </NavLink>
+          <NavLink to="/pricing" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>
+            Pricing
+          </NavLink>
         </nav>
       </div>
     </header>
