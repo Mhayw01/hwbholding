@@ -2,6 +2,7 @@ import React from 'react';
 import Nailgirl from '../Components/Partner/Nailgirl';
 import Salon from '../Components/Partner/Salon';
 import Helen from '../Components/Partner/Helen';
+import Solpathy from '../Components/Partner/Solpathy';
 
 const PartnerPage = () => {
   return (
@@ -10,6 +11,7 @@ const PartnerPage = () => {
       <Nailgirl />
       <Salon />
       <Helen />
+      <Solpathy />
     </main>
   );
 };
