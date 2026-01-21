@@ -10,13 +10,14 @@ import VeteransPage from './Pages/VeteransPage';
 import PartnerPage from './Pages/PartnerPage';
 import ReviewsPage from './Pages/ReviewsPage';
 import PricingPage from './Pages/PricingPage';
+import EventsPage from './Pages/EventsPage';
 import CollabsPage from './Pages/CollabsPage';
 import './App.css';
 
 // Wrapper to show Slides on select pages
 function AppRoutes() {
   const { pathname } = useLocation();
-  const showSlides = ['/services', '/our-story', '/faqs', '/veterans', '/reviews', '/pricing', '/collabs'].includes(pathname);
+  const showSlides = ['/services', '/our-story', '/faqs', '/veterans', '/reviews', '/pricing', '/events', '/collabs'].includes(pathname);
   return (
     <>
       {showSlides && <Slides />}
@@ -29,6 +30,7 @@ function AppRoutes() {
         <Route path="/partners" element={<PartnerPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/events" element={<EventsPage />} />
         <Route path="/collabs" element={<CollabsPage />} />
       </Routes>
     </>
