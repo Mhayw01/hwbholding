@@ -3,6 +3,7 @@ import Nailgirl from '../Components/Partner/Nailgirl';
 import Salon from '../Components/Partner/Salon';
 import Helen from '../Components/Partner/Helen';
 import Solpathy from '../Components/Partner/Solpathy';
+import RecoveryCymru from '../Components/Partner/RecoveryCymru';
 
 const PartnerPage = () => {
   return (
@@ -12,6 +13,7 @@ const PartnerPage = () => {
       <Salon />
       <Helen />
       <Solpathy />
+      <RecoveryCymru />
     </main>
   );
 };
