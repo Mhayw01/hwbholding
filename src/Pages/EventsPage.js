@@ -2,7 +2,8 @@ import React from "react";
 
 import groundGlowAsset from "../assets/hwb-ground-glow.jpg";
 import walkAsset from "../assets/hwb-walk.jpg";
-import veteransAsset from "../assets/hwb-veterans.svg";
+import standTallAsset from "../assets/hwb-stand-tall.jpg";
+import veteransAsset from "../assets/hwb-veterans-wellbeing-day.jpg";
 import ballAsset from "../assets/hwb-ball.svg";
 
 export default function EventsPage() {
@@ -37,7 +38,11 @@ export default function EventsPage() {
       </div>
 
       <div style={imageWrapperStyle}>
-        <img src={veteransAsset} alt="Hwb Veterans event" style={imgStyle} />
+        <img src={standTallAsset} alt="Stand Tall event" style={imgStyle} />
+      </div>
+
+      <div style={imageWrapperStyle}>
+        <img src={veteransAsset} alt="Veterans Wellbeing Day event" style={imgStyle} />
       </div>
 
       <div style={imageWrapperStyle}>

@@ -2,6 +2,7 @@ import React from 'react';
 import HwbForHeroes from '../Components/Veterans/HwbForHeroes';
 import Section1 from '../Components/Veterans/Section1';
 import Section2 from '../Components/Veterans/Section2';
+import WellbeingDay from '../Components/Veterans/WellbeingDay';
 
 const VeteransPage = () => {
   return (
@@ -10,6 +11,7 @@ const VeteransPage = () => {
       <HwbForHeroes />
       <Section1 />
       <Section2 />
+      <WellbeingDay />
     </main>
   );
 };

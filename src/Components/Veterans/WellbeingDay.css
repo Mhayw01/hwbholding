@@ -1,0 +1,23 @@
+.veterans-wellbeing {
+  background-color: #020202;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.veterans-wellbeing__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.veterans-wellbeing__poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .veterans-wellbeing {
+    padding: 2rem 1rem;
+  }
+}
