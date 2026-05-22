@@ -1,0 +1,31 @@
+.snapfitness {
+  background-color: #020202;
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.snapfitness__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.snapfitness__poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .snapfitness {
+    padding: 2rem 1rem;
+  }
+
+  .snapfitness__inner {
+    gap: 1.5rem;
+  }
+}
