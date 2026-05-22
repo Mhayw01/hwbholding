@@ -1,0 +1,80 @@
+.hwb-heroes {
+  background-color: #E9A524;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hwb-heroes__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hwb-heroes__logo {
+  width: 97px;
+  height: 97px;
+  margin-bottom: 1.5rem;
+}
+
+.hwb-heroes__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.hwb-heroes__subtitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+.hwb-heroes__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  text-align: left;
+}
+
+.hwb-heroes__item-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.hwb-heroes__item-body {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hwb-heroes {
+    padding: 2rem 1rem;
+  }
+
+  .hwb-heroes__title {
+    font-size: 1.25rem;
+  }
+
+  .hwb-heroes__subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .hwb-heroes__items {
+    gap: 1.5rem;
+  }
+
+  .hwb-heroes__item-title {
+    font-size: 0.9375rem;
+  }
+
+  .hwb-heroes__item-body {
+    font-size: 0.8125rem;
+  }
+}
