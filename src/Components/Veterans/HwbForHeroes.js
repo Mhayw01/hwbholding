@@ -1,6 +1,6 @@
 import React from 'react';
 import './HwbForHeroes.css';
-import VeteransLogo from '../../assets/Veterans-logo.svg';
+import HwbForHeroesLogo from '../../assets/hwb-for-heroes-logo.jpg';
 
 const items = [
   {
@@ -54,8 +54,8 @@ const HwbForHeroes = () => {
   return (
     <section className="hwb-heroes">
       <div className="hwb-heroes__inner">
-        <img src={VeteransLogo} alt="Hwb for Heroes logo" className="hwb-heroes__logo" />
-        <h2 className="hwb-heroes__title">Hwb for Heroes</h2>
+        <img src={HwbForHeroesLogo} alt="Hwb for Heroes — Health Hwb" className="hwb-heroes__logo" />
+        <h2 className="hwb-heroes__title sr-only">Hwb for Heroes</h2>
         <p className="hwb-heroes__subtitle">
           Supporting Veterans Through Community, Wellness &amp; Connection
         </p>

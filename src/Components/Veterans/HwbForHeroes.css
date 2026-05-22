@@ -1,5 +1,5 @@
 .hwb-heroes {
-  background-color: #E9A524;
+  background-color: #020202;
   padding: 4rem 1rem;
   text-align: center;
   color: white;
@@ -12,17 +12,25 @@
 }
 
 .hwb-heroes__logo {
-  width: 97px;
-  height: 97px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
   margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hwb-heroes__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hwb-heroes__subtitle {
@@ -57,8 +65,8 @@
     padding: 2rem 1rem;
   }
 
-  .hwb-heroes__title {
-    font-size: 1.25rem;
+  .hwb-heroes__logo {
+    max-width: 240px;
   }
 
   .hwb-heroes__subtitle {
