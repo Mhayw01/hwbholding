@@ -1,6 +1,6 @@
 [build]
-  # Static site — no build step. A real (no-op) command is set deliberately so
-  # this file overrides the old React "npm run build" left in the Netlify UI
-  # (an empty command string falls back to the UI command instead of overriding).
-  command = "echo 'Static site — nothing to build'"
-  publish = "."
+  # Static site. The Netlify dashboard has a stale "Publish directory: build"
+  # from the old React app that overrides at the deploy stage, so we assemble a
+  # build/ directory containing the site and publish that. No real build needed.
+  command = "rm -rf build && mkdir build && cp -r index.html assets build/"
+  publish = "build"
