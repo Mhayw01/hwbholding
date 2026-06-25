@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Health HWB — Wellbeing & Performance, Barry</title>
+<meta name="description" content="A wellbeing hub in the heart of Barry. Ice plunge, sauna, infrared & wellness for everyone." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p-gold:#F6D79E; --p-apricot:#F3B98E; --p-blush:#E8978C;
+  --p-sage:#C9DBC6; --p-teal:#AEDDD3; --p-aqua:#B9DEE8;
+  --sun-orange:#E85A1A; --sea-blue:#3FA7E0; --sun-gold:#E9A524;
+  --ink:#1B1A18; --charcoal:#2C2A28; --slate:#5A554F; --sand:#ECE3D7; --cream:#F7F1E8; --line:rgba(27,26,24,.12);
+  --grad-sunrise:linear-gradient(120deg,#F6D79E 0%,#F3B98E 55%,#E8978C 100%);
+  --grad-tide:linear-gradient(120deg,#C9DBC6 0%,#AEDDD3 55%,#B9DEE8 100%);
+  --grad-dawn:linear-gradient(120deg,#F6D79E 0%,#F3B98E 32%,#AEDDD3 70%,#B9DEE8 100%);
+  --grad-dusk:linear-gradient(135deg,#1B1A18 0%,#2c2522 55%,#3c3032 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
+h3,h4{font-weight:600}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sun-orange);margin:0 0 8px}
+
+/* ---------- HEADER (floating over hero, no bar) ---------- */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:linear-gradient(180deg,rgba(10,9,8,.5) 0%,rgba(10,9,8,0) 100%);pointer-events:none;transition:background .3s ease,box-shadow .3s ease}
+header.nav.scrolled{background:var(--grad-dusk);box-shadow:0 6px 24px rgba(0,0,0,.28)}
+.nav__in{display:flex;align-items:center;justify-content:space-between;padding:18px 0;pointer-events:none;transition:padding .3s ease}
+header.nav.scrolled .nav__in{padding:10px 0}
+header.nav.scrolled .brand img{height:46px}
+header.nav.scrolled .brand__wm{font-size:28px}
+header.nav.scrolled .brand__tag{font-size:9.5px;margin-top:4px;padding-top:4px}
+.nav__in>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:15px;cursor:pointer;text-decoration:none}
+.brand img{width:auto;height:62px;display:block;filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
+.brand__txt{display:flex;flex-direction:column;align-items:stretch;justify-content:center}
+.brand__wm{font-family:'Fraunces';font-weight:600;font-size:38px;letter-spacing:.05em;text-transform:uppercase;color:#fff;line-height:.95;white-space:nowrap;text-shadow:0 1px 10px rgba(0,0,0,.55)}
+.brand__tag{font-family:'Manrope';font-weight:600;font-size:11px;text-transform:uppercase;color:rgba(255,255,255,.92);margin-top:6px;padding-top:6px;border-top:1.5px solid rgba(255,255,255,.55);text-align:justify;text-align-last:justify;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.menu{display:flex;align-items:center;gap:6px}
+.menu a{font-weight:700;font-size:14.5px;letter-spacing:.01em;padding:9px 16px;border-radius:999px;text-decoration:none;color:#fff;cursor:pointer;transition:.2s;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.menu a:hover{background:rgba(255,255,255,.16)}
+.menu a.active{background:rgba(255,255,255,.92);color:var(--ink);text-shadow:none}
+.nav__left{display:flex;align-items:center;gap:10px}
+.nav__cta{display:flex;align-items:center;gap:10px}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:'Manrope';font-weight:700;font-size:14.5px;padding:12px 24px;border-radius:999px;text-decoration:none;transition:.2s;text-align:center}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--grad-sunrise);color:#3a2516;box-shadow:0 8px 20px rgba(232,90,26,.20)}
+.btn-cool{background:var(--grad-tide);color:#1f3a3a}
+.btn-ghost{background:transparent;border:1.5px solid currentColor;color:var(--ink);font-weight:600}
+.burger{display:none;background:none;border:none;font-size:34px;line-height:1;padding:4px 6px;cursor:pointer;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+.hero.sub{min-height:58vh}
+.hero__media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background-size:cover;background-position:center;animation:slowzoom 20s ease-in-out infinite alternate}
+video.hero__media{animation:none}
+@keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(80deg,rgba(15,13,12,.88) 0%,rgba(15,13,12,.55) 45%,rgba(15,13,12,.20) 100%)}
+.hero__in{position:relative;z-index:2;width:100%}
+.hero__logo{width:118px;height:118px;border-radius:50%;object-fit:cover;margin-bottom:22px;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.hero.sub .hero__logo{width:84px;height:84px;margin-bottom:16px}
+.hero__tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);padding:6px 13px;border-radius:999px;margin-bottom:18px}
+.hero__tag:before{content:"";width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.hero h1{font-size:clamp(36px,5.6vw,68px);max-width:16ch;color:#fff;line-height:1.04}
+.hero p{font-size:clamp(16px,1.9vw,20px);color:rgba(255,255,255,.88);max-width:46ch;margin-top:14px}
+.hero__btns{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
+
+/* ---------- PAGE / ROUTER ---------- */
+.page{display:none}
+.page.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* ---------- Z BANDS (the core layout) ---------- */
+.z{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.z .media{min-height:380px;background-size:cover;background-position:center;position:relative}
+.z .media .lab{position:absolute;left:18px;top:18px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:999px}
+.z .media .lab.lab-bl{top:auto;bottom:18px;left:18px;right:auto}
+.z .media .lab.lab-br{top:auto;bottom:18px;right:18px;left:auto}
+.z .copy{padding:56px 56px;display:flex;flex-direction:column;justify-content:center}
+.z .copy.tight{padding:46px 56px}
+.z .copy h2{font-size:clamp(24px,2.8vw,36px);margin-bottom:8px}
+.z .copy h3{font-size:clamp(22px,2.6vw,30px)}
+.z .copy .temp{font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--sea-blue);text-transform:uppercase;margin-bottom:6px}
+.z .copy p{font-size:15px;color:var(--slate);margin:.45em 0}
+.z .copy p strong{color:var(--charcoal)}
+.z .copy .tagline{margin-top:14px;font-family:'Fraunces';font-style:italic;font-size:18px;color:var(--ink)}
+.z .copy .btn{align-self:flex-start;margin-top:20px}
+/* alternation: even rows put image on the right */
+.z:nth-of-type(even) .media{order:2}
+.z.warm .copy{background:linear-gradient(120deg,#fff 0%,#FBEFE0 100%)}
+.z.coolbg .copy{background:linear-gradient(120deg,#fff 0%,#EAF3F1 100%)}
+.z.dark{color:#fff}
+.z.dark .copy{background:var(--grad-dusk)}
+.z.dark .copy h2,.z.dark .copy h3{color:#fff}
+.z.dark .copy p{color:rgba(255,255,255,.82)}
+.z.dark .copy .tagline{color:#fff}
+/* keep hero and the first section image from touching */
+.hero + .z{margin-top:40px}
+@media(max-width:780px){
+  .z{grid-template-columns:1fr}
+  /* mobile: TEXT then IMAGE for every row */
+  .z .copy,.z .copy.tight{order:1;padding:34px 26px}
+  .z .media,.z:nth-of-type(even) .media{order:2}
+  /* taller, fixed-ratio panel so mobile images never look squashed */
+  .z .media{height:74vw;min-height:280px;max-height:460px}
+  .hero + .z{margin-top:0}
+}
+/* Welcome section: taller image panel on desktop so the portrait reception photo isn't cropped to a thin strip */
+@media(min-width:781px){.z .media.welcome-media{min-height:560px}}
+
+/* ---------- CORE SERVICES STRIP (dense, dark) ---------- */
+.coreband{background:var(--grad-dusk);color:#fff;padding:54px 0}
+.coreband .eyebrow{color:var(--p-gold);text-align:center}
+.coreband h2{text-align:center;color:#fff;font-size:clamp(24px,3.2vw,38px);margin-bottom:10px}
+.core4{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.core4 .it{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px 20px;text-align:center}
+.core4 .it .ic{width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);margin:0 auto 16px;display:grid;place-items:center}
+.core4 .it .ic img{width:40px;height:40px;object-fit:contain}
+.core4 .it b{font-family:'Fraunces';font-weight:600;font-size:17px;display:block}
+.core4 .it span{font-size:12.5px;color:rgba(255,255,255,.62);display:block;margin-top:5px}
+@media(max-width:780px){.core4{grid-template-columns:1fr 1fr}}
+
+/* ---------- DIFFERENCE (compact) ---------- */
+.diffband{padding:74px 0}
+.why{display:grid;grid-template-columns:.92fr 1.08fr;gap:54px;align-items:center}
+.why__intro h2{font-size:clamp(28px,3.6vw,44px);margin:8px 0 16px}
+.why__intro p{font-size:16.5px;color:var(--slate);max-width:42ch}
+.why__intro .stamp{display:inline-block;margin-top:22px;font-family:'Fraunces';font-style:italic;font-size:19px;color:var(--ink)}
+.values{display:flex;flex-direction:column}
+.value{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:24px 4px;border-top:1px solid var(--line);align-items:start}
+.value:first-child{border-top:none;padding-top:4px}
+.value .num{font-family:'Fraunces';font-weight:600;font-size:32px;line-height:1;background:var(--grad-dawn);-webkit-background-clip:text;background-clip:text;color:transparent}
+.value h4{font-size:19px;margin-bottom:5px}
+.value p{font-size:14.5px;color:var(--slate);margin:0;line-height:1.6}
+@media(max-width:820px){.why{grid-template-columns:1fr;gap:30px}}
+
+/* partner logo + socials */
+.plogo{display:inline-block;height:88px;width:auto;max-width:170px;object-fit:contain;border-radius:16px;background:#fff;padding:8px;box-shadow:0 8px 22px rgba(27,26,24,.12);margin-bottom:18px}
+.z.dark .plogo{box-shadow:0 8px 22px rgba(0,0,0,.4)}
+.socials{display:flex;gap:12px;margin-top:20px;align-items:center}
+.socials a{width:48px;height:48px;border-radius:50%;border:none;display:grid;place-items:center;transition:.2s;background:var(--grad-sunrise);color:#3a2516}
+.socials a:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(27,26,24,.22)}
+.socials a svg{width:24px;height:24px;fill:currentColor;display:block}
+.z.coolbg .socials a{background:var(--grad-tide);color:#15403a}
+.z.dark .socials a{background:rgba(255,255,255,.18);color:#fff}
+
+/* veterans cards */
+.vband{padding:56px 0}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+@media(max-width:860px){.vgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.vgrid{grid-template-columns:1fr}}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+.vcard:before{content:"";position:absolute;top:0;left:22px;width:34px;height:4px;border-radius:0 0 4px 4px;background:var(--grad-sunrise)}
+.vcard h4{font-size:16.5px;margin-bottom:6px}
+.vcard p{font-size:13px;color:var(--slate);margin:0;line-height:1.55}
+
+/* veterans featured carousel (one per page) */
+.vstage{position:relative;margin-top:30px}
+.vstage__card{display:grid;grid-template-columns:1.05fr .95fr;border-radius:22px;overflow:hidden;box-shadow:0 14px 36px rgba(27,26,24,.16);background:#fff;min-height:400px}
+.vstage__pic{position:relative;min-height:340px;overflow:hidden}
+.vstage__pic .bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.vstage__body{padding:44px 46px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(120deg,#fff 0%,#FBEFE0 100%)}
+.vstage__count{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--sun-orange);margin-bottom:8px}
+.vstage__body h3{font-size:clamp(22px,2.6vw,30px);margin-bottom:12px}
+.vstage__body p{font-size:15px;color:var(--slate);margin:0}
+.vstage__arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:var(--grad-sunrise);color:#3a2516;font-size:24px;font-weight:700;line-height:1;display:grid;place-items:center;box-shadow:0 6px 18px rgba(27,26,24,.22);z-index:4;transition:.18s}
+.vstage__arrow:hover{transform:translateY(-50%) scale(1.06)}
+.vprev{left:-12px}.vnext{right:-12px}
+.vdots{display:flex;gap:8px;justify-content:center;margin:22px 0 0;flex-wrap:wrap}
+.vdot{width:9px;height:9px;border-radius:50%;background:var(--line);border:none;cursor:pointer;padding:0;transition:.2s}
+.vdot.active{width:26px;border-radius:999px;background:var(--grad-sunrise)}
+/* placeholder tile until photos are supplied */
+.vph{position:absolute;inset:0;display:grid;place-items:center;background:var(--grad-tide)}
+.vph .pl{text-align:center;color:rgba(27,26,24,.5);font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.vph .frame{width:40px;height:31px;border:2px solid rgba(27,26,24,.4);border-radius:6px;margin:0 auto 8px;position:relative}
+.vph .frame:before{content:"";position:absolute;left:6px;bottom:6px;width:9px;height:9px;border-radius:50%;border:2px solid rgba(27,26,24,.4)}
+.vph .frame:after{content:"";position:absolute;right:5px;top:5px;width:7px;height:7px;border-radius:50%;background:rgba(27,26,24,.35)}
+.vph .num{font-family:'Fraunces';font-size:15px;letter-spacing:0;color:rgba(27,26,24,.55);margin-top:4px}
+@media(max-width:780px){
+  .vstage__card{grid-template-columns:1fr}
+  .vstage__pic{min-height:0;height:60vw;max-height:300px}
+  .vstage__body{padding:28px 24px}
+  .vprev{left:8px}.vnext{right:8px}
+  .vstage__arrow{width:42px;height:42px;font-size:21px}
+}
+
+/* section intro */
+.intro{padding:56px 0 8px}
+.intro h2{font-size:clamp(26px,3.4vw,40px)}
+.intro p{font-size:17px;color:var(--slate);max-width:66ch;margin-top:10px}
+
+/* CTA */
+.ctaband{padding:18px 0 64px}
+.cta{position:relative;border-radius:26px;overflow:hidden;color:#fff;padding:56px 36px;text-align:center;background:var(--grad-dusk)}
+.cta:before{content:"";position:absolute;inset:0;background:radial-gradient(100% 120% at 0% 0%,rgba(233,165,36,.5),transparent 55%),radial-gradient(100% 120% at 100% 100%,rgba(63,167,224,.45),transparent 55%);mix-blend-mode:screen}
+.cta>*{position:relative;z-index:2}
+.cta h2{font-size:clamp(24px,3.2vw,38px);color:#fff;max-width:20ch;margin:0 auto}
+.cta .btn{margin-top:22px}
+
+/* reviews */
+.revwrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+@media(max-width:760px){.revwrap{grid-template-columns:1fr}}
+.revbox{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px}
+.stars{color:var(--sun-gold);font-size:22px;letter-spacing:3px}
+.revbox textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px;font-family:inherit;font-size:14px;min-height:84px;margin:12px 0;resize:vertical}
+.qrev{border-top:1px dashed var(--line);padding-top:13px;margin-top:13px}
+.qrev p{font-size:14px;color:var(--charcoal);font-style:italic;margin:.3em 0}
+.qrev small{color:var(--slate)}
+.gmark{width:15px;height:15px;border-radius:50%;background:conic-gradient(#4285F4 0 25%,#EA4335 0 50%,#FBBC05 0 75%,#34A853 0);display:inline-block;vertical-align:middle;margin-right:6px}
+
+/* ---------- FOOTER ---------- */
+footer.site{background:var(--grad-dusk);color:rgba(255,255,255,.72);padding:56px 0 26px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+footer.site .brand img{width:64px;height:64px;border-radius:50%}
+footer.site h5{font-family:'Manrope';text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--p-gold);margin:0 0 12px}
+footer.site ul{list-style:none;padding:0;margin:0}
+footer.site li{padding:5px 0;font-size:14px}
+footer.site a{text-decoration:none;cursor:pointer}
+footer.site a:hover{color:#fff}
+.fblurb{font-size:13.5px;max-width:32ch;margin:14px 0 16px}
+.fform{display:flex;gap:8px;max-width:290px}
+.fform input{flex:1;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:10px 16px;font-family:inherit;font-size:13.5px}
+.fform input::placeholder{color:rgba(255,255,255,.5)}
+.fbtn{border:none;border-radius:999px;padding:10px 18px;font-weight:700;font-size:13.5px;background:var(--grad-sunrise);color:#3a2516;cursor:pointer}
+.fbadges{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px;align-items:center;max-width:380px;margin-top:8px}
+.fbadge{display:flex;align-items:center;justify-content:center}
+.fbadge img{max-height:100px;max-width:100%;width:auto;display:block}
+.fbar{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px}
+.fbar a{color:var(--p-aqua)}
+
+@media(max-width:880px){
+  .brand img{width:auto;height:44px}
+  .brand__wm{font-size:26px}
+  .brand__tag{font-size:7px;margin-top:5px;padding-top:5px}
+  header.nav.scrolled .brand img{height:36px}
+  header.nav.scrolled .brand__wm{font-size:22px}
+  header.nav.scrolled .brand__tag{font-size:6px;margin-top:4px;padding-top:4px}
+  .menu{display:none;position:absolute;top:100%;left:16px;right:16px;flex-direction:column;background:rgba(18,16,15,.94);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:10px;gap:2px}
+  .menu.open{display:flex}
+  .menu a{padding:13px 14px;color:#fff;text-shadow:none}
+  .menu a.active{background:rgba(255,255,255,.92);color:var(--ink)}
+  .burger{display:block}
+}
+
+/* ---------- COLLABS: logo media panels ---------- */
+.z .media.logobg{display:grid;place-items:center;padding:30px}
+.z .media.logobg.warm{background:var(--grad-sunrise)}
+.z .media.logobg.cool{background:var(--grad-tide)}
+.z .media.logobg img{width:auto;max-width:74%;max-height:60%;background:#fff;border-radius:18px;padding:26px;box-shadow:0 12px 30px rgba(27,26,24,.2)}
+.z .copy .tagline.warm{color:var(--sun-orange)}
+
+/* ---------- EVENTS ---------- */
+.evband{padding:40px 0 8px}
+.evgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:30px}
+@media(max-width:820px){.evgrid{grid-template-columns:1fr}}
+.evcard{display:grid;grid-template-columns:150px 1fr;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.evcard .pic{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:200px}
+.evcard .pic.fit{background-size:contain}
+.evcard .body{padding:22px 24px}
+.evcard .when{display:inline-block;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#3a2516;background:var(--grad-sunrise);padding:5px 11px;border-radius:999px;margin-bottom:10px}
+.evcard h4{font-size:19px;margin-bottom:7px}
+.evcard p{font-size:13.5px;color:var(--slate);margin:0 0 8px;line-height:1.55}
+.evcard .meta{font-size:12.5px;color:var(--charcoal);font-weight:600}
+.evcard.feature{grid-column:1 / -1;grid-template-columns:260px 1fr}
+@media(max-width:560px){.evcard,.evcard.feature{grid-template-columns:1fr}.evcard .pic{min-height:180px}}
+
+/* ---------- FAQs accordion ---------- */
+.faqwrap{padding:34px 0 10px}
+.faqgroup{margin:30px 0 14px}
+.faqgroup__h{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+.faqgroup__h .gdot{width:13px;height:13px;border-radius:50%;flex:0 0 auto}
+.faqgroup h3{font-size:clamp(20px,2.4vw,26px)}
+.acc{border-bottom:1px solid var(--line)}
+.acc__q{width:100%;background:none;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-family:'Manrope';font-weight:600;font-size:16px;color:var(--ink)}
+.acc__q:hover{color:var(--sun-orange)}
+.acc__ic{flex:0 0 auto;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:19px;line-height:1;color:#3a2516;transition:transform .25s}
+.acc.open .acc__ic{transform:rotate(45deg)}
+.acc__a{overflow:hidden;max-height:0;transition:max-height .32s ease}
+.acc__a p{margin:0 2px 18px;font-size:14.5px;color:var(--slate);line-height:1.65}
+@media(max-width:480px){
+  .brand{gap:11px}
+  .brand img{height:38px}
+  .brand__wm{font-size:21px}
+  .brand__tag{font-size:5.5px;margin-top:4px;padding-top:4px}
+  header.nav.scrolled .brand img{height:31px}
+  header.nav.scrolled .brand__wm{font-size:18px}
+  header.nav.scrolled .brand__tag{font-size:4.7px;margin-top:3px;padding-top:3px}
+}
+
+/* ---------- PRICING ---------- */
+.priceband{padding:40px 0 8px}
+.pricegrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px;margin-top:30px;align-items:stretch}
+@media(max-width:820px){.pricegrid{grid-template-columns:1fr}}
+.pcardx{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 30px;display:flex;flex-direction:column}
+.pcardx.feature{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad-dawn) border-box;position:relative}
+.pcardx .ribbon{align-self:flex-start;font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#3a2516;background:var(--grad-sunrise);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.pcardx h3{font-size:23px;margin-bottom:4px}
+.pcardx .price{font-family:'Fraunces';font-weight:600;font-size:50px;line-height:1;margin:10px 0 2px}
+.pcardx .price small{font-family:'Manrope';font-weight:600;font-size:15px;color:var(--slate)}
+.pcardx .sub{font-size:14px;color:var(--slate);margin:0 0 16px}
+.pcardx ul{list-style:none;padding:0;margin:0 0 22px}
+.pcardx li{font-size:14px;color:var(--charcoal);padding:7px 0 7px 26px;position:relative;border-top:1px solid var(--line)}
+.pcardx li:first-child{border-top:none}
+.pcardx li:before{content:"";position:absolute;left:0;top:13px;width:13px;height:13px;border-radius:50%;background:var(--grad-tide)}
+.pcardx .btn{margin-top:auto;align-self:flex-start}
+.pcardx.soft{background:var(--grad-tide);border:none}
+.pcardx.soft h3,.pcardx.soft p{color:#1f3a3a}
+.hoursband{padding:14px 0 8px}
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--grad-dusk);color:#fff;border-radius:20px;padding:30px 34px;margin-top:8px}
+@media(max-width:620px){.hours{grid-template-columns:1fr}}
+.hours h4{color:var(--p-gold);font-family:'Manrope';text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin:0 0 8px}
+.hours p{margin:3px 0;font-size:15px;color:rgba(255,255,255,.9)}
+.pricenote{font-size:13px;color:var(--slate);margin-top:16px;text-align:center}
+
+/* ---------- REVIEW CARDS ---------- */
+.revcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+@media(max-width:860px){.revcards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.revcards{grid-template-columns:1fr}}
+.rc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.rc .stars{font-size:17px}
+.rc q{display:block;font-family:'Fraunces';font-style:italic;font-size:15.5px;color:var(--charcoal);line-height:1.55;margin:12px 0 16px}
+.rc .who{display:flex;align-items:center;gap:11px}
+.rc .av{width:36px;height:36px;border-radius:50%;background:var(--grad-dawn);display:grid;place-items:center;font-weight:700;color:#3a2516;font-size:14px}
+.rc .who b{font-size:14px;display:block}
+.rc .who small{color:var(--slate);font-size:11.5px;display:flex;align-items:center;gap:5px}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" onclick="go('home')" aria-label="Health HWB home"><img src="assets/hwb-mark.png" alt=""><span class="brand__txt"><span class="brand__wm">Health HWB</span><span class="brand__tag">Ice Plunge · Sauna · Infrared Sauna · Wellness</span></span></a>
+    <nav class="menu" id="menu">
+      <a data-pg="home" class="active" onclick="go('home')">Home</a>
+      <a data-pg="services" onclick="go('services')">Services</a>
+      <a data-pg="veterans" onclick="go('veterans')">Veterans</a>
+      <a data-pg="partners" onclick="go('partners')">Hwb Partners</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book</a>
+      <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<div class="page active" id="home">
+  <div class="hero">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>A space for wellbeing, recovery &amp; self-care</h1>
+      <p>Your local wellbeing hub in the heart of Barry.</p>
+      <div class="hero__btns">
+        <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book a session</a>
+        <a class="btn btn-ghost" style="color:#fff" onclick="go('services')">Explore services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Z: Welcome / intro (original Section2 copy) -->
+  <div class="z warm">
+    <div class="media welcome-media" style="background-image:url('assets/reception.jpg');background-position:center 12%"><span class="lab">In the heart of Barry</span></div>
+    <div class="copy">
+      <p class="eyebrow">Welcome to Health HWB</p>
+      <h2>Your local wellbeing hub</h2>
+      <p>Whether you’re in the blue light services, a student, a carer, a veteran, an athlete, or just part of our community, <strong>this space is for you.</strong></p>
+      <p>A place where you can reset, slow down, and feel part of something bigger. Not just a wellness centre, but a hub for connection. A place to breathe, reflect and recover without pressure or judgment.</p>
+    </div>
+  </div>
+
+  <!-- Core services strip (original Section1 copy) -->
+  <div class="coreband">
+    <div class="wrap">
+      <p class="eyebrow">Our core services include</p>
+      <h2>Premium therapies, without the premium price tag</h2>
+      <div class="core4">
+        <div class="it"><div class="ic"><img src="assets/ic-cold.svg" alt=""></div><b>Ice Plunge Therapy</b><span>Two deep baths, 6–10°C</span></div>
+        <div class="it"><div class="ic"><img src="assets/ic-fire.svg" alt=""></div><b>Infrared &amp; Traditional Saunas</b><span>Deep heat &amp; recovery</span></div>
+        <div class="it"><div class="ic"><img src="assets/ic-massage.svg" alt=""></div><b>Massage Therapies</b><span>Sports, deep tissue &amp; holistic</span></div>
+        <div class="it"><div class="ic"><img src="assets/ic-community.svg" alt=""></div><b>Community Well-being Room</b><span>Rest, reflect or simply be</span></div>
+        <div class="it"><div class="ic"><img src="assets/ic-presso.svg" alt=""></div><b>Presso-therapy</b><span>Compression recovery</span></div>
+        <div class="it"><div class="ic"><img src="assets/ic-garden.svg" alt=""></div><b>Community Garden</b><span>Outdoor safe space</span></div>
+      </div>
+      <div style="text-align:center;margin-top:28px"><a class="btn btn-cool" onclick="go('services')">View all services</a></div>
+    </div>
+  </div>
+
+  <!-- Z: What makes us different (original Section3 copy) -->
+  <div class="diffband"><div class="wrap why">
+    <div class="why__intro">
+      <p class="eyebrow">Why HWB</p>
+      <h2>People before profit, always</h2>
+      <p>HWB isn’t just a wellness centre. It’s a hub for connection. A place to reset, slow down, and feel part of something bigger, right here in the heart of Barry.</p>
+      <span class="stamp">“What helps me, helps others.”</span>
+      <div style="margin-top:26px"><a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book a session</a></div>
+    </div>
+    <div class="values">
+      <div class="value"><span class="num">01</span><div><h4>Everyone belongs here</h4><p>Welcome exactly as you are. Shift workers, students, carers, veterans, athletes, neighbours. This space belongs to all of us.</p></div></div>
+      <div class="value"><span class="num">02</span><div><h4>Wellness for everyone</h4><p>Premium therapies like sauna, cold water and chromatherapy, without the premium price tag. Because looking after yourself shouldn’t be a luxury.</p></div></div>
+      <div class="value"><span class="num">03</span><div><h4>Stronger together</h4><p>Recovery happens through connection. We create moments of shared experience, so no one has to do it alone.</p></div></div>
+      <div class="value"><span class="num">04</span><div><h4>Rooted in the community</h4><p>Proud to host local therapists, beauty pros and mental health specialists, supporting each other and the people of Barry.</p></div></div>
+    </div>
+  </div></div>
+
+  <!-- Z: founder teaser -->
+  <div class="z dark">
+    <div class="media" style="background-image:url('assets/community.jpg')"><span class="lab lab-bl">Our founder</span></div>
+    <div class="copy">
+      <p class="eyebrow" style="color:var(--p-gold)">Built from lived experience</p>
+      <h2>Born from one man’s journey</h2>
+      <p>HWB began with Jake Hudson. He joined the Royal Navy at 16, and years later faced his own battle with mental health. Through recovery, he saw first hand how vital community and accessible wellbeing really are.</p>
+      <p>So he built HWB, a place where no one has to struggle alone, and where the support that helped him is there for everyone in Barry.</p>
+      <a class="btn btn-primary" onclick="go('veterans')">Our story &amp; Hwb for Heroes</a>
+    </div>
+  </div>
+
+  <div class="ctaband"><div class="wrap"><div class="cta">
+    <h2>A place to reset, recharge &amp; feel better.</h2>
+    <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book your first session</a>
+  </div></div></div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<div class="page" id="services">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>Our services &amp; benefits</h1>
+      <p>Move between both saunas, the cold plunge baths and the wellbeing room — it’s all included.</p>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/svc-coldplunge-new.jpg');background-position:center 32%"><span class="lab">Cold · 6–10°C</span></div>
+    <div class="copy">
+      <span class="temp">Contrast therapy</span><h3>Cold Plunge Baths</h3>
+      <p>Two deep ice plunge baths kept between 6–10°C for powerful contrast therapy.</p>
+      <p><strong>What it does:</strong> Cold immersion stimulates blood flow, reduces inflammation, and releases endorphins. Whether you’re an athlete, shift worker, or just need a reset, you’ll feel the mental clarity and physical relief almost instantly.</p>
+      <p><strong>Why it works:</strong> Used regularly, cold therapy can support better sleep, a stronger immune system, and reduced muscle soreness.</p>
+      <p class="tagline">Step in, reset your system, and leave feeling recharged.</p>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media" style="background-image:url('assets/svc-sauna-new.jpg');background-position:center 40%"><span class="lab">Heat</span></div>
+    <div class="copy">
+      <span class="temp">High dry heat</span><h3>Traditional Finnish Sauna</h3>
+      <p>A high-temperature, dry-air sauna with centuries of healing heritage.</p>
+      <p><strong>What it does:</strong> The intense heat promotes full-body detox, supports cardiovascular health, improves breathing, and relaxes deep muscle tension. As your body sweats, it flushes out toxins, clears the skin, and eases tightness.</p>
+      <p><strong>Why it works:</strong> The dry air raises your core temperature, increasing circulation, calming the nervous system, and triggering natural recovery from the inside out.</p>
+      <p class="tagline">Sweat it out, breathe deep, come back to balance.</p>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/svc-infrared-red.jpg');background-position:center 42%"><span class="lab">Infrared</span></div>
+    <div class="copy">
+      <span class="temp">Deep, gentle heat</span><h3>Infrared Sauna</h3>
+      <p>A dry heat therapy that uses infrared light to gently warm the body from within, not just the air around you.</p>
+      <p><strong>What it does:</strong> Infrared waves penetrate deep into muscles and joints, easing pain, improving circulation, boosting cell regeneration and promoting better sleep. Ideal after training, during recovery, or in times of stress.</p>
+      <p><strong>Why it works:</strong> Unlike traditional saunas, infrared heat reaches deeper layers of tissue, raising your internal temperature and supporting natural detox, inflammation reduction, and hormonal balance.</p>
+      <p class="tagline">Let the warmth sink in, and feel your body start to heal.</p>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media" style="background-image:url('assets/svc-presso.jpg');background-position:center 28%"><span class="lab lab-br">Recovery</span></div>
+    <div class="copy">
+      <span class="temp">Compression recovery</span><h3>Presso-therapy</h3>
+      <p>Dynamic air compression boots and arm sleeves that massage your legs and arms, flushing out fatigue after training, a shift on your feet, or a long day.</p>
+      <p><strong>What it does:</strong> Sequential pressure waves move through each chamber, boosting circulation, clearing out lactic acid and easing swelling, so tired, heavy arms and legs feel lighter and properly recovered.</p>
+      <p><strong>Why it works:</strong> By gently pumping blood and lymph back toward the heart, presso-therapy speeds up your body’s natural recovery, reduces muscle soreness and supports better movement, whether you train hard or are simply on your feet all day.</p>
+      <p class="tagline">Sit back, let the pressure do the work, and feel your arms and legs come back to life.</p>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/svc-community.jpg');background-position:center 40%"><span class="lab">Calm</span></div>
+    <div class="copy">
+      <span class="temp">Your sanctuary</span><h3>Community Well-being Room</h3>
+      <p>A calming space to pause, reflect, and connect — whether you stretch, meditate, breathe or simply sit still.</p>
+      <p>It’s designed to be yours: a moment of quiet before the cold, a place to write or recharge after the sauna. The room adapts to group sessions, 1-to-1 wellbeing work, or solo reflection, always supporting your mental and emotional reset.</p>
+      <p class="tagline">Your calm space to rest, reflect, or simply be.</p>
+    </div>
+  </div>
+
+  <div class="z dark">
+    <div class="media" style="background-image:url('assets/svc-garden.jpg');background-position:center 42%"><span class="lab">Community garden</span></div>
+    <div class="copy">
+      <span class="temp" style="color:var(--p-gold)">Outdoor safe space</span><h3>Community Garden</h3>
+      <p>A quiet green space in the heart of Barry, built by the community for the community, where you can step away from the noise and simply breathe.</p>
+      <p>Created through community collaboration and the support of local businesses, the garden gives everyone a calm outdoor place to relax, reflect and connect with others. Share a brew, get your hands in the soil, or just sit a while in the fresh air.</p>
+      <p>Time outdoors, alongside people who understand, is one of the simplest ways to lift your mood and feel less alone. It is open to veterans, families and the whole community, with no pressure and no judgment.</p>
+      <p class="tagline">A safe space to slow down, get some air, and feel part of something.</p>
+      <a class="btn btn-primary" onclick="go('veterans')">More on Hwb for Heroes</a>
+    </div>
+  </div>
+
+  <div class="ctaband"><div class="wrap"><div class="cta">
+    <h2>It’s all included. Move at your own pace.</h2>
+    <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book a session</a>
+  </div></div></div>
+</div>
+
+<!-- ================= VETERANS ================= -->
+<div class="page" id="veterans">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>Hwb for Heroes</h1>
+      <p>Supporting veterans through community, wellness &amp; connection.</p>
+    </div>
+  </div>
+
+  <!-- Z: Our Story - Jake (original OurStory Section1 copy) -->
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/vet-ourstory.jpg');background-position:center 12%"><span class="lab lab-bl">Our story, Jake Hudson</span></div>
+    <div class="copy">
+      <p class="eyebrow">From Royal Navy to community champion</p>
+      <h2>Our Story, Jake Hudson</h2>
+      <p>At 16, Jake joined the Royal Navy, where he learned discipline, leadership and the value of camaraderie. Life changed when he had to return home unexpectedly following the loss of his mum.</p>
+      <p>Years later, his biggest battle came after leaving the service, when he faced significant mental health challenges and some of the darkest periods of his life.</p>
+      <p>Throughout it all, one person never gave up on him, his wife, Kim.</p>
+      <p>When Jake struggled to believe in himself, Kim believed in him enough for both of them. Through every setback, every difficult day and every challenge, she remained his rock, his strength and the person who kept him moving forward.</p>
+      <p>Alongside their children, her unwavering love, patience and support became the foundation of his recovery and helped him rediscover purpose, hope and a belief that better days were ahead.</p>
+      <p>That journey would eventually inspire the creation of Health Hwb.</p>
+    </div>
+  </div>
+
+  <!-- We Only Went For A Sauna -->
+  <div class="z coolbg">
+    <div class="media" style="background-image:url('assets/vet-sauna-story.jpg');background-position:center 20%"><span class="lab lab-bl">We only went for a sauna</span></div>
+    <div class="copy">
+      <p class="eyebrow">Where it began</p>
+      <h2>We Only Went For A Sauna</h2>
+      <p>Sometimes the smallest acts of kindness can change a life. At a time when Jake was struggling with his mental health and finding it difficult to see a way forward, Helen and Ian George saw something he couldn’t see in himself. Potential. Not the struggles he was facing, but the person they knew he could become. Rather than walking away, they reached out.</p>
+      <p>They invited him to West Wales for the day to experience contrast therapy. A sauna. An ice bath. A chance to step away from the noise and simply breathe. What started as a simple invitation became much more than that.</p>
+      <p>Their kindness, encouragement and unwavering belief helped Jake begin to see a future beyond the challenges he was facing. They became trusted friends, mentors and a constant source of support, helping him realise that no matter how difficult life becomes, there is always a way forward. More importantly, they helped him believe in himself again.</p>
+      <p>More than anything, Helen and Ian simply wanted to see Jake, Kim and the boys come through the difficult times and build the life they deserved. They saw a family worth believing in and never stopped encouraging them forward, even when the road ahead seemed uncertain. Their support was never about recognition or reward. It came from a place of genuine care and a desire to see others succeed.</p>
+      <p>The phrase “We Only Went For A Sauna” captures the moment everything began. A reminder that sometimes all it takes is one act of kindness, one conversation, and people willing to believe in you when you can’t yet believe in yourself.</p>
+      <p class="tagline">What started with a sauna became a vision, and what started as an act of kindness became Health Hwb. The rest, as they say, is history.</p>
+    </div>
+  </div>
+
+  <!-- Initiatives (original HwbForHeroes copy) -->
+  <div class="vband"><div class="wrap">
+    <p class="eyebrow">Supporting our veterans</p>
+    <h2 style="font-size:clamp(26px,3.4vw,40px)">What we do for the community</h2>
+    <div class="vstage">
+      <button class="vstage__arrow vprev" id="vprev" aria-label="Previous">‹</button>
+      <button class="vstage__arrow vnext" id="vnext" aria-label="Next">›</button>
+      <div class="vstage__card">
+        <div class="vstage__pic" id="vpic"></div>
+        <div class="vstage__body">
+          <div class="vstage__count" id="vcount"></div>
+          <h3 id="vtitle"></h3>
+          <p id="vdesc"></p>
+        </div>
+      </div>
+    </div>
+    <div class="vdots" id="vdots"></div>
+  </div></div>
+
+  <!-- Z: From Service to Strength (original Veterans Section1/2 copy) -->
+  <div class="z dark">
+    <div class="media" style="background-image:url('assets/vet-finalist.jpg');background-position:center 5%"><span class="lab">From service to strength</span></div>
+    <div class="copy">
+      <p class="eyebrow" style="color:var(--p-gold)">Welsh Veterans Awards finalist</p>
+      <h2>From service to strength</h2>
+      <p>Our founder Jake has been named a finalist at the Welsh Veterans Awards two years running. For Jake, the award was never the point. The focus has always been on supporting our veterans and our wider community, and showing people there are other ways to look after themselves in the crazy, challenging world we live in.</p>
+      <p>It is about making self-care and wellbeing something everyone can reach, whatever they are carrying. As Jake says: <em>“No matter how far you’ve fallen, it’s still possible to rise.”</em></p>
+      <p class="tagline">Wellness belongs to everyone. We’re making sure of it.</p>
+      <a class="btn btn-primary" href="https://www.veteransawards.co.uk" target="_blank" rel="noopener">Support the cause</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PARTNERS ================= -->
+<div class="page" id="partners">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>Hwb Partners</h1>
+      <p>A growing circle of local talent, here to serve the community with care, connection and authenticity.</p>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/partners/nailgirl-pic.svg')"></div>
+    <div class="copy">
+      <p class="eyebrow">By Kim Hudson</p>
+      <h3>The Nail Girl</h3>
+      <p>At the heart of the Health Hwb is a belief that looking after yourself isn’t a luxury, it’s a form of care. And no one embodies that more than Kim Hudson, founder of The Nail Girl.</p>
+      <p>Kim brings more than polish, she brings positivity, connection, and a calm, welcoming space where everyone feels seen. Whether it’s your regular gel manicure, a full set of builder gel nails, or just a chance to relax and catch up, The Nail Girl is all about that little moment in your week where you pause, feel good, and leave a little lighter than you came in.</p>
+      <p>Her clients come for the nails, but stay for the warm chat, the uplifting energy, and the genuine care that Kim offers in every appointment. It’s more than a treatment, it’s a reset.</p>
+      <p>As Kim puts it: <em>“Everyone deserves a space where they can just be themselves. No judgement, just kindness, and a fresh set of nails to remind you that you matter.”</em></p>
+      <p>That’s exactly why The Nail Girl is such an important part of the Hwb — because confidence and care go hand in hand. Book an appointment or follow Kim’s work on Instagram, or book via WhatsApp.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/__thenailgirl__/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        <a href="https://wa.me/447810818573" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media" style="background-image:url('assets/partners/salon-pic.svg')"></div>
+    <div class="copy">
+      <p class="eyebrow">With Sam Lewis</p>
+      <h3>Salon Revive</h3>
+      <p>If you’ve ever walked into a salon and left feeling like a new person, you already know what Sam Lewis brings to the Health Hwb.</p>
+      <p>Salon Revive isn’t just about great hair (though you’ll absolutely get that too) — it’s about transformation in every sense. Sam has created a space where you can take a breath, feel seen, and walk out feeling refreshed, not just on the outside but inside too.</p>
+      <p>With years of experience and a calm, uplifting presence, Sam has a gift for making people feel at ease. Whether you’re after a fresh cut, a colour revamp, or just some time out from the stress of life, Salon Revive offers more than a service, it offers sanctuary.</p>
+      <p>Sam believes in the power of small things to make a big difference: <em>“A good haircut can boost your whole mood. It’s not vanity, it’s self-worth, it’s identity, it’s confidence.”</em></p>
+      <p>We’re proud to have Salon Revive as one of our core partners — because wellness isn’t just what you do in the gym or therapy room. Follow Sam’s work on Instagram, or book via WhatsApp.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/sl_salon.revive/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        <a href="https://wa.me/447565681550" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/partners/helen-room.jpg');background-position:center 45%"></div>
+    <div class="copy">
+      <p class="eyebrow">Namaste</p>
+      <h3>Reiki by Helen</h3>
+      <p>Tucked inside the Health Hwb is a space where the noise quiets, the tension softens, and you’re invited to simply breathe. That space is held by Helen, the calming presence behind Reiki by Helen.</p>
+      <p>Helen offers Reiki, a gentle, energy-based therapy that promotes balance, deep relaxation, and emotional release. Whether you’re carrying stress, recovering from burnout, or just need to reconnect with yourself, Helen’s sessions create a moment of stillness in the middle of a busy life.</p>
+      <p>Her approach is intuitive and deeply compassionate. Every session is tailored to the individual — a safe, nurturing environment where nothing is expected, and everything is welcome. Many who visit her talk about feeling lighter, more grounded, and more in tune with themselves after just one session.</p>
+      <p>As Helen puts it: <em>“We all hold onto more than we realise — tension, emotion, pressure. Reiki gives you space to let go. To feel held. To feel whole.”</em></p>
+      <p>Discover more and book a session via Facebook or WhatsApp.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=100067395978872" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://wa.me/447855646430" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media" style="background-image:url('assets/partners/jade-room.jpg');background-position:center 32%"></div>
+    <div class="copy">
+      <p class="eyebrow">Massage &amp; Yoga</p>
+      <h3>Jade Yoga</h3>
+      <p>Step into Jade Yoga and the pace of the day softens. This is Jade’s space within the Hwb, a calm room of plants, warm light and quiet intention, built for wellness and therapies that bring body, mind and soul back into harmony.</p>
+      <p>Jade’s heart is in restorative yoga, a gentle, grounding practice that helps you slow your breath, let go of what you’re holding, and reconnect with yourself. It’s yoga as a reset rather than a workout, open to every body and every level.</p>
+      <p>Alongside the mat, Jade offers a full menu of massage and bodywork. Aromatherapy, deep tissue and classic Swedish, plus Balinese head massage and reflexology to ease tension and restore balance. Her specialist treatments go further still, with Thai harmony, hot stone and warm bamboo massage, and an indulgent foot ritual to finish.</p>
+      <p>Every treatment is tailored to you, a personalised approach in a space designed purely to relax, reset and restore. As Jade puts it: <em>“Balance, heal, thrive.”</em></p>
+      <p class="tagline">Wellness belongs to everyone. We’re making sure of it.</p>
+      <div class="socials">
+        <a href="https://wa.me/447794459968" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/partners/beauty-house.jpg');background-position:center 30%"></div>
+    <div class="copy">
+      <p class="eyebrow">Eyelashes &amp; brows</p>
+      <h3>The Beauty House</h3>
+      <p>Tucked inside the Health Hwb, The Beauty House is a welcoming, relaxing space dedicated to helping you look and feel your best.</p>
+      <p>Specialising in eyelashes and brows, it offers professional treatments in a calm, friendly environment where every client gets a personal touch. Whether you want a subtle enhancement or a complete refresh, you’re in safe hands.</p>
+      <p>With a focus on quality, attention to detail and client care, The Beauty House delivers beautiful results while making sure every appointment is comfortable and enjoyable. From the moment you walk through the door, you’re welcomed into a space designed for relaxation, self-care and confidence.</p>
+      <p class="tagline">Because everyone deserves to feel like the best version of themselves.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/xthebeautyhousee" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media logobg cool"><img src="assets/partners/testament-logo.jpg" alt="Testament Health &amp; Wellness logo"></div>
+    <div class="copy">
+      <p class="eyebrow">Naturopathy &amp; nutritional therapy</p>
+      <h3>Testament Health &amp; Wellness</h3>
+      <p>Rooted in nature, guided by science. Testament Health and Wellness brings naturopathy, nutritional therapy and functional medicine to the Hwb, getting to the root cause of ongoing health concerns rather than just treating the symptoms.</p>
+      <p>Founded and led by practitioner Tess, it takes a holistic, research-backed approach tailored to you. From low energy, poor sleep and brain fog to digestive issues and chronic or autoimmune conditions, the focus is on supporting your body’s natural ability to heal, regain balance and thrive.</p>
+      <p>Services include nutritional therapy, herbal medicine, mycotherapy, micro-immunotherapy, IV and IM nutrient therapy, advanced testing and phlebotomy. It all starts with a free discovery call to talk through your goals and build a personalised plan.</p>
+      <p class="tagline">“The greatest wealth is health.”</p>
+      <a class="btn btn-cool" href="https://testamenthealthandwellness.co.uk/" target="_blank" rel="noopener">Visit the website</a>
+    </div>
+  </div>
+
+  <div class="z dark">
+    <div class="media" style="background-image:url('assets/partners/recovery-cymru-room.jpg');background-position:center 45%"></div>
+    <div class="copy">
+      <p class="eyebrow" style="color:var(--p-gold)">Every Tuesday · Peer support</p>
+      <h3>Recovery Cymru</h3>
+      <p>Every Tuesday, we’re proud to welcome Recovery Cymru into the Hwb. They offer peer support for people affected by addiction, mental health struggles and life challenges — real conversations, lived experience, no judgement, and helping people feel less alone.</p>
+      <p>Bringing them here was important to us because recovery isn’t just about the body. It’s about connection, support, purpose and having safe people around you when you need them most. Having Recovery Cymru here means we can support people in a deeper way, right here in the heart of Barry.</p>
+      <p>Whether someone needs a chat, guidance, support or just somewhere they feel understood… this is why we do what we do. Community supporting community.</p>
+      <p class="tagline">Wellness belongs to everyone. We’re making sure of it.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= COLLABS ================= -->
+<div class="page" id="collabs">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>Collabs</h1>
+      <p>Local clubs and partners we move, recover and grow with.</p>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/vet-garden-day.jpg');background-position:center 12%"><span class="lab">Hwb for Heroes</span></div>
+    <div class="copy">
+      <p class="eyebrow">Branded support for our veterans</p>
+      <h3>WRKHAUS</h3>
+      <p>Hwb for Heroes has recently partnered with WRKHAUS, an internationally recognised branded workwear, embroidery, printing, PPE, toolwear and industrial supply company.</p>
+      <p>WRKHAUS has generously committed to providing branded Hwb for Heroes merchandise free of charge throughout the year, to support veterans within the community.</p>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media" style="background-image:url('assets/cardio-core.jpg');background-size:contain;background-repeat:no-repeat;background-color:#000;background-position:center"></div>
+    <div class="copy">
+      <p class="eyebrow">Community fitness</p>
+      <h3>Cardio Core Fitness</h3>
+      <p>We’re proud to collaborate with Cardio Core Fitness, a community-focused fitness centre based in Barry that is passionate about helping people improve their physical and mental wellbeing.</p>
+      <p>More than just a gym, Cardio Core Fitness has built a supportive, inclusive community where members of all ages, abilities and fitness levels feel comfortable, motivated and encouraged to reach their goals. Whether you want to build strength, improve fitness, lose weight, grow in confidence or simply feel healthier, their experienced team is there every step of the way.</p>
+      <p>With a range of fitness classes, personal training options and 24-hour gym access, they offer flexible ways to stay active and prioritise your health. Their focus on community, encouragement and long-term wellbeing aligns closely with our values here at the Health Hwb.</p>
+      <p class="tagline">Together, we’re committed to helping our community move more, feel better and live healthier lives.</p>
+      <a class="btn btn-cool" href="https://www.cardiocorefit.co.uk/" target="_blank" rel="noopener">Visit the website</a>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media" style="background-image:url('assets/snap-fitness-offer.jpg');background-size:contain;background-repeat:no-repeat;background-color:#0a0a0a;background-position:center"></div>
+    <div class="copy">
+      <p class="eyebrow">Exclusive partnership</p>
+      <h3>Snap Fitness Barry</h3>
+      <p>We have teamed up with Snap Fitness Barry to bring their members premium recovery and wellbeing alongside their training. Hard sessions deserve smart recovery, and the Hwb is built for exactly that.</p>
+      <p>Snap Fitness members get <strong>15% off all Health Hwb services</strong>, from ice plunges and saunas to infrared and wellness sessions. Show your Snap Fitness key tag, or scan the QR code in the gym, to redeem.</p>
+      <p>It is a natural fit. They focus on results and community, we help the body rebuild, restore and come back stronger. Together we make looking after yourself, inside and out, that bit easier.</p>
+      <p class="tagline warm">Train hard. Recover smarter.</p>
+    </div>
+  </div>
+
+  <div class="z coolbg">
+    <div class="media logobg cool"><img src="assets/valerunners-logo.svg" alt="Vale Runners logo"></div>
+    <div class="copy">
+      <p class="eyebrow">Moving for mind, body &amp; recovery</p>
+      <h3>Vale Runners</h3>
+      <p>We’re proud to be collaborating with Vale Runners, a free, all-abilities running group based right here in Barry, and proudly voted Run Wales Running Group of the Year 2022.</p>
+      <p>More than a running club, they’re a community built on encouragement, inclusivity and the joy of movement. With weekly sessions ranging from 3K to 10K, hill sprints to easy-paced chatty runs, they create space for everyone, from complete beginners to seasoned runners, to move their body, clear their mind and connect with others.</p>
+      <p>The support doesn’t stop at the finish line. Vale Runners use the Hwb’s contrast therapy facilities, combining heat and cold exposure as a powerful recovery tool, whether it’s easing tired muscles after a long run or building mental resilience.</p>
+      <p>All sessions are completely free and shared weekly on the Vale Runners Facebook page.</p>
+    </div>
+  </div>
+
+  <div class="z warm">
+    <div class="media logobg warm"><img src="assets/barrytown-logo.svg" alt="Barry RFC logo"></div>
+    <div class="copy">
+      <p class="eyebrow">Pride, purpose &amp; recovery</p>
+      <h3>Barry RFC</h3>
+      <p>We’re proud to be working with Barry RFC, a club that’s more than a rugby team, it’s a family.</p>
+      <p>Based at The Reservoir Fields, Barry Rugby Football Club is a cornerstone of the local community, offering rugby for boys, girls, youth and senior players in an environment built on respect, teamwork and belonging.</p>
+      <p>From first tackle to final whistle, the club’s energy comes from its people, the volunteers, coaches, first aiders and supporters who pour their heart into the game. Under Director of Rugby Mike Morgan, the club is focused on development at every age, building strong pathways and investing in the future.</p>
+      <p>Rugby doesn’t end on the pitch. Barry RFC players now use the Hwb’s contrast therapy facilities as part of their recovery, helping reduce inflammation, improve muscle recovery and build long-term resilience.</p>
+    </div>
+  </div>
+
+  <div class="ctaband"><div class="wrap"><div class="cta">
+    <h2>Want to bring your club or team to the Hwb?</h2>
+    <a class="btn btn-primary" href="mailto:healthhwb@gmail.com">Get in touch</a>
+  </div></div></div>
+</div>
+
+<!-- ================= EVENTS ================= -->
+<div class="page" id="events">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>Events</h1>
+      <p>What’s on at the Hwb, from weekly groups to one-off nights.</p>
+    </div>
+  </div>
+
+  <div class="evband"><div class="wrap">
+    <p class="eyebrow">What’s on</p>
+    <h2 style="font-size:clamp(26px,3.4vw,40px)">Regular sessions &amp; upcoming events</h2>
+    <div class="evgrid">
+
+      <div class="evcard feature">
+        <div class="pic fit" style="background-image:url('assets/hwb-ground-glow.jpg');background-color:#1f1712"></div>
+        <div class="body">
+          <span class="when">Jun 12 · Jul 10 · Aug 14</span>
+          <h4>Ground &amp; Glow</h4>
+          <p>A journey inward, a glow that stays. An evening of somatic yin yoga, breathwork, meditation and a sound bath, with saunas and an optional cold plunge, herbal teas, snacks and gifts.</p>
+          <p class="meta">7:00pm to 9:15pm · £59 (£49 early bird) · with Shakti Bliss Wellbeing &amp; Karma Beauty</p>
+        </div>
+      </div>
+
+      <div class="evcard">
+        <div class="pic fit" style="background-image:url('assets/hwb-veterans-wellbeing-day.jpg');background-color:#0a0e16"></div>
+        <div class="body">
+          <span class="when">Last Tuesday monthly</span>
+          <h4>Veterans Wellbeing Day</h4>
+          <p>Free access to ice plunges and saunas for veterans, with an Armed Forces Liaison Officer on site and support from About Turn Wales.</p>
+          <p class="meta">2:00pm to 9:00pm · Free for veterans</p>
+        </div>
+      </div>
+
+      <div class="evcard">
+        <div class="pic fit" style="background-image:url('assets/hwb-stand-tall.jpg');background-color:#07090c"></div>
+        <div class="body">
+          <span class="when">Every Monday · 6:30pm</span>
+          <h4>Stand Tall</h4>
+          <p>A men’s mental health support group, creating a safe space to open up, connect and support one another through honest conversation.</p>
+          <p class="meta">Community Room · All welcome</p>
+        </div>
+      </div>
+
+      <div class="evcard">
+        <div class="pic fit" style="background-image:url('assets/hwb-walk.jpg');background-color:#eef0f0"></div>
+        <div class="body">
+          <span class="when">Every Monday · 4pm</span>
+          <h4>HWB Walk &amp; Talk Group</h4>
+          <p>Fresh air, gentle movement and real conversation. Get outside, move more and connect with the community, because every step counts.</p>
+          <p class="meta">All welcome</p>
+        </div>
+      </div>
+
+      <div class="evcard feature">
+        <div class="pic fit" style="background-image:url('assets/vet-summerball.jpg');background-color:#0a0805"></div>
+        <div class="body">
+          <span class="when">Saturday 29 August · 7pm</span>
+          <h4>Veterans Summer Ball</h4>
+          <p>A black-tie evening bringing the community together to raise vital funds for Riverside Retreat, run by veterans, for veterans. Three-course meal, live music and entertainment, and a fundraiser auction.</p>
+          <p class="meta">Old Barrians Lodge, Barry · £35 per person, £280 for a table of 8 · Proceeds to Riverside Retreat</p>
+        </div>
+      </div>
+
+    </div>
+  </div></div>
+
+  <div class="ctaband"><div class="wrap"><div class="cta">
+    <h2>Come and be part of it.</h2>
+    <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book a session</a>
+  </div></div></div>
+</div>
+
+<!-- ================= PRICING ================= -->
+<div class="page" id="pricing">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>Pricing</h1>
+      <p>Simple, fair pricing. One session, everything included.</p>
+    </div>
+  </div>
+
+  <div class="priceband"><div class="wrap">
+    <p class="eyebrow">Premium therapies, without the premium price tag</p>
+    <h2 style="font-size:clamp(26px,3.4vw,40px)">One price, everything included</h2>
+    <div class="pricegrid">
+
+      <div class="pcardx feature">
+        <span class="ribbon">Most popular</span>
+        <h3>Single Session</h3>
+        <div class="price">£17 <small>/ 1 hour</small></div>
+        <p class="sub">Full access to the whole space. Move at your own pace.</p>
+        <ul>
+          <li>Two ice plunge baths, 6 to 10°C</li>
+          <li>Traditional Finnish &amp; infrared saunas</li>
+          <li>Chromatherapy lighting throughout</li>
+          <li>Community Wellbeing Room</li>
+        </ul>
+        <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book a session</a>
+      </div>
+
+      <div class="pcardx">
+        <span class="ribbon" style="background:var(--grad-tide);color:#1f3a3a">For veterans</span>
+        <h3>Veterans Wellbeing Day</h3>
+        <div class="price">Free</div>
+        <p class="sub">For veterans, on the last Tuesday of every month.</p>
+        <ul>
+          <li>Free contrast therapy sessions</li>
+          <li>Sauna, infrared &amp; ice baths</li>
+          <li>Brew, chat &amp; peer support</li>
+        </ul>
+        <a class="btn btn-cool" onclick="go('veterans')">Hwb for Heroes</a>
+      </div>
+
+      <div class="pcardx soft">
+        <span class="ribbon">Coming soon</span>
+        <h3>Packages &amp; memberships</h3>
+        <p class="sub" style="margin-top:8px">We’re taking our time to settle in, so we’re not offering packages just yet. Keep an eye out, more ways to save are on the way.</p>
+        <a class="btn btn-ghost" style="margin-top:auto;align-self:flex-start" href="https://www.instagram.com/healthhwbbarry/" target="_blank" rel="noopener">Follow for updates</a>
+      </div>
+
+    </div>
+
+    <div class="hoursband">
+      <div class="hours">
+        <div>
+          <h4>Midweek</h4>
+          <p>Monday to Friday: 6am to 11am</p>
+          <p>Evenings: 4pm to 8pm</p>
+        </div>
+        <div>
+          <h4>Weekend</h4>
+          <p>Saturday: 9am to 5pm</p>
+          <p>Sunday: 10am to 5pm</p>
+        </div>
+      </div>
+      <p class="pricenote">We recommend booking online to guarantee your spot. If you’re nearby and we have space, feel free to pop in and we’ll gladly fit you in.</p>
+    </div>
+  </div></div>
+
+  <div class="ctaband"><div class="wrap"><div class="cta">
+    <h2>Ready when you are.</h2>
+    <a class="btn btn-primary" href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book your session</a>
+  </div></div></div>
+</div>
+
+<!-- ================= FAQs ================= -->
+<div class="page" id="faqs">
+  <div class="hero sub">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" poster="assets/hero-home-poster.jpg">
+      <source src="assets/hero-home.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero__in">
+      <h1>FAQs</h1>
+      <p>Everything you might want to know before your first visit.</p>
+    </div>
+  </div>
+  <div class="faqwrap"><div class="wrap" style="max-width:880px">
+    <div id="faqroot"></div>
+  </div></div>
+  <div class="ctaband"><div class="wrap"><div class="cta">
+    <h2>Still got a question?</h2>
+    <a class="btn btn-primary" href="mailto:healthhwb@gmail.com">Ask the team</a>
+  </div></div></div>
+</div>
+
+<!-- ================= REVIEWS (linked from footer) ================= -->
+<div class="page" id="reviews">
+  <div class="intro"><div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2>Loved by the community</h2>
+    <p>A few words from our community, straight from Google. Rated 5.0 from 127 reviews, and counting.</p>
+  </div></div>
+  <div class="wrap" style="padding-bottom:64px">
+    <div class="revwrap">
+      <div class="revbox">
+        <div class="stars">★★★★★</div>
+        <p style="font-weight:700;margin:8px 0 2px">5.0 · 127 Google reviews</p>
+        <p style="font-size:14px;color:var(--slate);margin:0">Read every review and see our live rating over on Google.</p>
+        <a class="btn btn-ghost" style="margin-top:16px" href="https://www.google.com/search?q=health+hwb+barry" target="_blank" rel="noopener"><span class="gmark"></span>See all on Google</a>
+      </div>
+      <div class="revbox">
+        <h3 style="font-size:21px">Leave a review</h3>
+        <p style="font-size:14px;color:var(--slate);margin-top:4px">Enjoyed your visit? It takes a minute, and it means the world to a small community hub.</p>
+        <div class="stars" style="margin-top:10px">★★★★★</div>
+        <a class="btn btn-primary" style="margin-top:14px" href="https://www.google.com/search?q=health+hwb+barry" target="_blank" rel="noopener">Write a review on Google</a>
+        <p style="font-size:12.5px;color:var(--slate);margin-top:12px">Opens our Google listing, where you can post your review publicly in a couple of taps.</p>
+      </div>
+    </div>
+
+    <div class="revcards">
+      <div class="rc">
+        <div class="stars">★★★★★</div>
+        <q>Recently attended a contrast therapy session with Jake. An absolutely fantastic experience. Jake guided us through the process and far exceeded our expectations. We managed the cold water! A beautiful and spotless space.</q>
+        <div class="who"><span class="av">SF</span><div><b>Sian France</b><small><span class="gmark"></span>Google review</small></div></div>
+      </div>
+      <div class="rc">
+        <div class="stars">★★★★★</div>
+        <q>My first time at the Health Hwb tonight, amazing experience. Jake is really knowledgeable and made us feel relaxed and in safe hands from the start. I never thought I could brave an ice bath but managed 2 minutes on my second dip. You feel so good afterwards.</q>
+        <div class="who"><span class="av">RC</span><div><b>Rebecca Cook</b><small><span class="gmark"></span>Google review</small></div></div>
+      </div>
+      <div class="rc">
+        <div class="stars">★★★★★</div>
+        <q>I had my first ever hot and cold therapy and couldn’t have asked for it to go any better! Jake made us feel so comfortable and was very informative. Such a refreshing feeling, already can’t wait to go back!</q>
+        <div class="who"><span class="av">JG</span><div><b>Jasmine Griffiths</b><small><span class="gmark"></span>Google review</small></div></div>
+      </div>
+      <div class="rc">
+        <div class="stars">★★★★★</div>
+        <q>Just had the most amazing contrast therapy at the Health Hwb! I had never done any cold water therapy and was anxious, but Jake guided us through every stage, explained the theory behind it all, and was highly supportive.</q>
+        <div class="who"><span class="av">KW</span><div><b>Katie West</b><small><span class="gmark"></span>Google review</small></div></div>
+      </div>
+      <div class="rc">
+        <div class="stars">★★★★★</div>
+        <q>10/10 service. Jake and the team were very welcoming, made us feel comfortable and at ease from the moment we walked through the door. We went to the Hwb for the contrast therapy that includes hot sauna, infrared sauna and ice baths.</q>
+        <div class="who"><span class="av">AW</span><div><b>Alex Williams</b><small><span class="gmark"></span>Google review</small></div></div>
+      </div>
+      <div class="rc">
+        <div class="stars">★★★★★</div>
+        <q>Amazing experience, never thought I would like the cold water so much. Jake was brilliant, calming and talked me through the process. I loved every minute of it. Thank you for bringing this beautiful place to High Street Barry.</q>
+        <div class="who"><span class="av">YD</span><div><b>Your Day Your Way</b><small><span class="gmark"></span>Google review</small></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h5>Recognised</h5>
+        <div class="fbadges">
+          <div class="fbadge"><img src="assets/badges/vet-finalist-2025.png" alt="Welsh Veterans Awards 2025 Finalist"></div>
+          <div class="fbadge"><img src="assets/badges/vet-finalist-2026.png" alt="Welsh Veterans Awards 2026 Finalist"></div>
+          <div class="fbadge"><img src="assets/badges/armed-forces-covenant.png" alt="Armed Forces Covenant"></div>
+          <div class="fbadge"><img src="assets/badges/bro-radio-boty.png" alt="Bro Radio Community Awards 2026 Business of the Year Winner"></div>
+        </div>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a onclick="go('veterans')">Our Story</a></li>
+          <li><a onclick="go('collabs')">Collabs</a></li>
+          <li><a onclick="go('events')">Events</a></li>
+          <li><a onclick="go('veterans')">Veterans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li><a onclick="go('services')">Services</a></li>
+          <li><a onclick="go('pricing')">Pricing</a></li>
+          <li><a onclick="go('faqs')">FAQs</a></li>
+          <li><a onclick="go('reviews')">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://www.facebook.com/share/16BZHyFPAw/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/healthhwbbarry/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:healthhwb@gmail.com">healthhwb@gmail.com</a></li>
+          <li><a href="https://healthhwb.simplybook.it/v2/" target="_blank" rel="noopener">Book a session</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© 2026 Health HWB · Barry, Vale of Glamorgan</span>
+      <span><a onclick="go('reviews')">Reviews</a> · Reset · Recharge · Feel better</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  var el=document.getElementById(id); if(el){el.classList.add('active');}
+  document.querySelectorAll('.menu a').forEach(a=>a.classList.toggle('active',a.dataset.pg===id));
+  document.getElementById('menu').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant'});
+  syncHeader();
+}
+function syncHeader(){
+  var h=document.querySelector('header.nav');
+  if(h) h.classList.toggle('scrolled', window.scrollY>50);
+}
+window.addEventListener('scroll',syncHeader,{passive:true});
+window.addEventListener('load',syncHeader);
+document.addEventListener('click',function(e){
+  var menu=document.getElementById('menu');
+  if(!menu||!menu.classList.contains('open')) return;
+  if(e.target.closest('#menu')||e.target.closest('.burger')) return;
+  menu.classList.remove('open');
+});
+
+/* ----- Veterans "What we do" featured carousel (one per page) ----- */
+var vItems=[
+  {img:"assets/vet-wellbeing-day.jpg",fit:"contain",bg:"#0a0e16",t:"Monthly Veterans Wellbeing Day",d:"Every last Tuesday of the month, Hwb for Heroes runs a dedicated Veterans Wellbeing Day offering free access to contrast therapy sessions, including traditional sauna, infrared sauna and ice baths. Veterans are also encouraged to stay for a brew, conversation and peer support in a relaxed environment."},
+  {img:"assets/vet-standtall.jpg",fit:"contain",bg:"#07090c",t:"Stand Tall, Men’s Mental Health Group",d:"Every Monday evening, the Health Hwb hosts Stand Tall, a men’s mental health support group focused on creating a safe environment for men to open up, connect and support one another through honest conversation and community."},
+  {img:"assets/vet-garden-sign.jpg",pos:"center 28%",t:"Veterans Safe Space Garden",d:"The Hwb for Heroes Veterans Safe Space Garden was created through community collaboration and support from local businesses. The garden provides veterans with a quiet outdoor area to relax, reflect and connect with others in a safe environment."},
+  {img:"assets/vet-walk.jpg",pos:"center 24%",t:"HMS Raleigh to Barry Awareness Walk",d:"Jake Hudson, Helen George and Ian George completed an 8-day, 182-mile walk from HMS Raleigh in Plymouth back to Barry to raise awareness around veteran wellbeing and mental health. The challenge also helped raise funds towards building the Veterans Safe Space Garden."},
+  {img:"assets/vet-walktalk.jpg",fit:"contain",bg:"#ffffff",t:"Community Walk & Talk",d:"Weekly Walk & Talk sessions are organised to encourage veterans and members of the local community to get outside, move more and connect socially. These sessions help combat isolation and support mental wellbeing."},
+  {img:"assets/vet-xmas.jpg",fit:"contain",bg:"#1c1410",t:"Veterans Christmas Dinner",d:"Hwb for Heroes proudly organised and delivered a free Veterans Christmas Dinner on Christmas Day, ensuring veterans had somewhere welcoming and supportive to attend during the festive period. This was made possible with the support of Barry Athletic Football Club, who kindly provided the venue."},
+  {img:"assets/vet-summerball.jpg",fit:"contain",bg:"#0a0805",t:"Annual Veteran Charity Fundraising",d:"Health Hwb / Hwb for Heroes dedicates an entire year of fundraising and awareness efforts towards a chosen veteran organisation. This year’s chosen charity is Riverside Retreat Veterans Camp, a veteran safe space that offers support all year round, including camping stays, family breaks, safe accommodation and emergency support for vulnerable veterans, all completely free of charge."},
+  {img:"assets/vet-garden-day.jpg",pos:"center 10%",t:"Partnership with WRKHAUS",d:"Hwb for Heroes has recently partnered with WRKHAUS, an internationally recognised branded workwear, embroidery, printing, PPE, toolwear and industrial supply company. WRKHAUS has generously committed to providing branded Hwb for Heroes merchandise free of charge throughout the year to support veterans within the community."}
+];
+(function(){
+  var vi=0;
+  var pic=document.getElementById('vpic'),ttl=document.getElementById('vtitle'),dsc=document.getElementById('vdesc'),cnt=document.getElementById('vcount'),dots=document.getElementById('vdots');
+  if(!pic) return;
+  function ph(i){return '<div class="vph"><div class="pl"><div class="frame"></div>Your image<div class="num">'+String(i+1).padStart(2,'0')+'</div></div></div>';}
+  dots.innerHTML=vItems.map(function(_,i){return '<button class="vdot'+(i===0?' active':'')+'" data-i="'+i+'" aria-label="Go to '+(i+1)+'"></button>';}).join('');
+  function render(){
+    var it=vItems[vi];
+    var extra='background-size:'+(it.fit||'cover')+';'+(it.bg?'background-color:'+it.bg+';':'')+(it.pos?'background-position:'+it.pos+';':'');
+    pic.innerHTML=it.img?'<div class="bg" style="background-image:url(\''+it.img+'\');'+extra+'"></div>':ph(vi);
+    ttl.textContent=it.t;dsc.textContent=it.d;
+    cnt.textContent='Initiative '+(vi+1)+' of '+vItems.length;
+    var ds=dots.querySelectorAll('.vdot');
+    for(var i=0;i<ds.length;i++) ds[i].classList.toggle('active',i===vi);
+  }
+  function move(n){vi=(vi+n+vItems.length)%vItems.length;render();}
+  document.getElementById('vprev').onclick=function(){move(-1);};
+  document.getElementById('vnext').onclick=function(){move(1);};
+  dots.querySelectorAll('.vdot').forEach(function(d){d.onclick=function(){vi=+d.dataset.i;render();};});
+  var sx=0;
+  var stage=document.querySelector('.vstage');
+  stage.addEventListener('touchstart',function(e){sx=e.changedTouches[0].clientX;},{passive:true});
+  stage.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)move(dx<0?1:-1);},{passive:true});
+  render();
+})();
+
+/* ----- FAQs accordion (click to open, single-open) ----- */
+var faqGroups=[
+  {title:"Health & Well-being",color:"#E9A524",items:[
+    {q:"What are the benefits of cold water therapy?",a:"Cold plunges help reduce inflammation, speed up recovery, and release endorphins.<br><br>They can also support better sleep, boost circulation, and improve your ability to handle stress."},
+    {q:"Why is contrast therapy (hot and cold) so effective?",a:"Alternating between heat and cold stimulates your circulatory system, flushes out toxins, and promotes deep muscle recovery.<br><br>It’s a natural way to reset your body and mind."},
+    {q:"How does an infrared sauna differ from a traditional sauna?",a:"Infrared saunas use light to heat the body directly.<br><br>This allows deeper penetration into joints and muscles, helping with pain relief, cell repair and stress reduction, at a lower ambient temperature."},
+    {q:"What does a Finnish sauna do for your health?",a:"The high dry heat helps detoxify the body through sweat, improves cardiovascular health, relaxes muscles and clears the skin.<br><br>It also supports breathing and mental clarity."},
+    {q:"Can Chromatherapy lighting really help with wellbeing?",a:"Yes, different colours influence your nervous system.<br><br>Blue can calm, red energises, green balances.<br><br>It’s subtle but powerful, especially when combined with heat or cold."},
+    {q:"Do these therapies support mental health too?",a:"Absolutely.<br><br>Saunas, cold plunges and Chromatherapy all play a role in regulating stress, boosting mood through endorphins, and encouraging mindfulness through sensory reset."},
+    {q:"Can this help with sleep or fatigue?",a:"Yes.<br><br>Infrared heat and cold water immersion can improve your circadian rhythm, reduce cortisol, and leave your body better prepared for deep, restorative sleep."}
+  ]},
+  {title:"Presso-therapy",color:"#E8978C",items:[
+    {q:"What is presso-therapy?",a:"Presso-therapy uses air compression boots that gently squeeze your legs in waves from foot to thigh.<br><br>It boosts circulation and helps your body flush out the fatigue that builds up after training, work or a long day on your feet."},
+    {q:"What does it feel like?",a:"Like a firm, rhythmic massage.<br><br>The boots inflate and release in sequence, so you feel waves of gentle pressure moving up your legs. Most people find it deeply relaxing."},
+    {q:"Who is it for?",a:"Anyone with tired, heavy or aching legs.<br><br>Athletes love it after training, but it is just as good after a long shift on your feet or a busy day."},
+    {q:"How long is a session and what do I do?",a:"A typical session runs around 20 to 30 minutes.<br><br>There is nothing to do. Settle in, relax, and let the boots run through their pressure cycles for you. Comfortable clothing is ideal."},
+    {q:"What are the benefits?",a:"Better circulation, less muscle soreness and swelling, faster recovery, and lighter-feeling legs."},
+    {q:"Is there anyone who should check first?",a:"If you have circulatory issues, blood clots, or are pregnant, please speak to your doctor and our team before booking."}
+  ]},
+  {title:"What to Bring & How It Works",color:"#3FA7E0",items:[
+    {q:"How do I book a session?",a:"You can book online through our website or via the booking link on our socials.<br><br>For group bookings or specific partner services, contact us directly."},
+    {q:"Do I need to book in advance?",a:"We recommend it, especially for evenings and weekends.<br><br>Walk-ins are welcome when there’s space, but booking guarantees your time slot."},
+    {q:"What should I bring with me?",a:"Bring a towel, swimsuit, and water bottle.<br><br>A robe and flip-flops are optional but ideal if you plan to move between hot and cold areas."},
+    {q:"Do you provide changing facilities?",a:"Yes.<br><br>We have private changing areas and lockers to store your belongings."},
+    {q:"How long is a typical session?",a:"Most sessions last 45 to 60 minutes.<br><br>You’re welcome to stay a little longer to use the Community Wellbeing Room or take your time between hot and cold transitions."},
+    {q:"Can I use all the areas in one session?",a:"Yes.<br><br>You can move between both saunas, the cold plunge baths, and the wellbeing room during your booked time. It’s all included."},
+    {q:"Are there any health conditions I should be aware of?",a:"If you have any underlying medical conditions, especially heart-related or circulatory issues, or are pregnant, please consult your doctor first and speak to our team before booking."},
+    {q:"Is there a minimum age?",a:"Yes, our services are for ages 18+.<br><br>We may run youth or family-friendly events in future, so stay tuned."}
+  ]},
+  {title:"First Time Fears",color:"#E85A1A",items:[
+    {q:"Will I freeze in the cold plunge?",a:"Nope, it’s cold, not cruel.<br><br>It might feel intense at first, but most people adjust within seconds. And the endorphin rush? Worth every breath."},
+    {q:"Do I have to stay in the cold plunge for ages?",a:"Not at all.<br><br>Even 30 to 60 seconds can be enough to get the benefits. Some stay longer, some dip in and out. It’s your body, you choose."},
+    {q:"Will I come out of the sauna looking like a beetroot?",a:"Maybe, but only temporarily.<br><br>The heat increases circulation, which gives you that warm, flushed glow. Think post-hot-yoga vibes."},
+    {q:"Is the infrared sauna just a fancy heater?",a:"Nope.<br><br>It’s legit science. Infrared waves go deep into muscles and joints, helping with pain relief, sleep, and even cell regeneration. It’s more like a healing cocoon than a heat box."},
+    {q:"Is Chromatherapy just pretty lights?",a:"It’s more than mood lighting.<br><br>Each colour carries its own frequency, which can influence your nervous system, energy levels and sleep cycle. Plus, it just feels good."},
+    {q:"Do I have to be super fit to come here?",a:"Not at all.<br><br>HWB is for every body, from athletes and busy parents to shift workers and stressed-out students. Come as you are."},
+    {q:"Can I just come to relax and not do the plunge or sauna?",a:"Absolutely.<br><br>The Community Room is your sanctuary. Come to rest, breathe, journal, or simply unplug."}
+  ]}
+];
+(function(){
+  var root=document.getElementById('faqroot');
+  if(!root) return;
+  var html='';
+  faqGroups.forEach(function(g){
+    html+='<div class="faqgroup"><div class="faqgroup__h"><span class="gdot" style="background:'+g.color+'"></span><h3>'+g.title+'</h3></div>';
+    g.items.forEach(function(it){
+      html+='<div class="acc"><button class="acc__q">'+it.q+'<span class="acc__ic" style="background:'+g.color+'">+</span></button><div class="acc__a"><p>'+it.a+'</p></div></div>';
+    });
+    html+='</div>';
+  });
+  root.innerHTML=html;
+  root.querySelectorAll('.acc__q').forEach(function(btn){
+    btn.onclick=function(){
+      var acc=btn.parentElement;
+      var isOpen=acc.classList.contains('open');
+      root.querySelectorAll('.acc.open').forEach(function(o){o.classList.remove('open');o.querySelector('.acc__a').style.maxHeight='0';});
+      if(!isOpen){acc.classList.add('open');var a=acc.querySelector('.acc__a');a.style.maxHeight=a.scrollHeight+'px';}
+    };
+  });
+})();
+</script>
+</body>
+</html>
