@@ -1,3 +1,6 @@
 [build]
-  command = ""
+  # Static site — no build step. A real (no-op) command is set deliberately so
+  # this file overrides the old React "npm run build" left in the Netlify UI
+  # (an empty command string falls back to the UI command instead of overriding).
+  command = "echo 'Static site — nothing to build'"
   publish = "."
